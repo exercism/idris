@@ -1,0 +1,20 @@
+{
+  "slug": "idris",
+  "language": "Idris",
+  "repository": "https://github.com/exercism/xidris",
+  "active": false,
+  "test_pattern": "TODO",
+  "problems": [
+
+  ],
+  "deprecated": [
+
+  ],
+  "ignored": [
+    "bin",
+    "docs"
+  ],
+  "foregone": [
+
+  ]
+}
