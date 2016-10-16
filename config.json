@@ -4,9 +4,6 @@
   "repository": "https://github.com/exercism/xidris",
   "active": false,
   "test_pattern": "TODO",
-  "problems": [
-
-  ],
   "deprecated": [
 
   ],
@@ -15,6 +12,9 @@
     "docs"
   ],
   "foregone": [
+
+  ],
+  "exercises": [
 
   ]
 }
