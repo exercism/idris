@@ -1,3 +1,4 @@
-package hello-world
+package helloworld
 
-modules = HelloWorld
+modules = HelloWorld, Test
+tests = Test.testJustAlice, Test.testJustBob, Test.testNothing
