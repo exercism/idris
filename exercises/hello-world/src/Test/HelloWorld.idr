@@ -1,4 +1,4 @@
-module Test
+module Test.HelloWorld
 
 import HelloWorld
 
@@ -17,3 +17,9 @@ testJustAlice = assertEq (greet (Just "Alice")) "Hello, Alice!"
 
 testJustBob : IO ()
 testJustBob = assertEq (greet (Just "Bob")) "Hello, Bob!"
+
+runTests : IO ()
+runTests = do
+    testNothing
+    testJustAlice
+    testJustBob

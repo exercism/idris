@@ -1,4 +1,5 @@
 package helloworld
 
-modules = HelloWorld, Test
-tests = Test.testJustAlice, Test.testJustBob, Test.testNothing
+sourcedir = src
+modules = HelloWorld, Test.HelloWorld
+tests = Test.HelloWorld.runTests
