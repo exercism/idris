@@ -3,7 +3,6 @@
   "language": "Idris",
   "repository": "https://github.com/exercism/xidris",
   "active": false,
-  "test_pattern": "TODO",
   "deprecated": [
 
   ],
@@ -15,6 +14,10 @@
 
   ],
   "exercises": [
-
+    {
+      "slug": "hello-world" ,
+      "difficulty": 1,
+      "topics": []
+    }
   ]
 }
