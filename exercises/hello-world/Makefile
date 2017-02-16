@@ -1,23 +1,23 @@
-IDRIS := idris
-PKG   := HelloWorld
+idris ?= idris
+pkg   := HelloWorld
 
-.PHONY: build clean clean-all install rebuild test
+.PHONY: build clean clobber install rebuild test
 
 all: build
 
 build:
-	@$(IDRIS) --build $(PKG).ipkg
+	@ ${idris} --build ${pkg}.ipkg
 
 clean:
-	@$(IDRIS) --clean $(PKG).ipkg
-	@find . -name '*.ibc' -delete
+	@ ${idris} --clean ${pkg}.ipkg
 
-clean-all: clean
+clobber: clean
+	@ find . -name '*.ibc' -delete
 
 install:
-	@$(IDRIS) --install $(PKG).ipkg
+	@ ${idris} --install ${pkg}.ipkg
 
 rebuild: clean build
 
 test:
-	@$(IDRIS) --testpkg $(PKG).ipkg
+	@ ${idris} --testpkg ${pkg}.ipkg
