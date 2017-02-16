@@ -16,9 +16,12 @@
   ],
   "exercises": [
     {
-      "slug": "hello-world" ,
+      "slug": "hello-world",
       "difficulty": 1,
-      "topics": []
+      "topics": [
+        "optional values"
+        "text formatting"
+      ]
     }
   ]
 }
