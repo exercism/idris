@@ -15,19 +15,19 @@ assertFalse = assertBool False
 
 -- year not divisible by 4: common year
 test2015 : IO ()
-test2015 = assertFalse (leap 2015)
+test2015 = assertFalse (isLeap 2015)
 
 -- year divisible by 4, not divisible by 100: leap year
 test2016 : IO ()
-test2016 = assertTrue (leap 2016)
+test2016 = assertTrue (isLeap 2016)
 
 -- year divisible by 100, not divisible by 400: common year
 test2100 : IO ()
-test2100 = assertFalse (leap 2100)
+test2100 = assertFalse (isLeap 2100)
 
 -- year divisible by 400: leap year
 test2000 : IO ()
-test2000 = assertTrue (leap 2100)
+test2000 = assertTrue (isLeap 2100)
 
 runTests : IO ()
 runTests = do
