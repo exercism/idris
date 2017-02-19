@@ -27,7 +27,7 @@ test2100 = assertFalse (isLeap 2100)
 
 -- year divisible by 400: leap year
 test2000 : IO ()
-test2000 = assertTrue (isLeap 2100)
+test2000 = assertTrue (isLeap 2000)
 
 runTests : IO ()
 runTests = do
