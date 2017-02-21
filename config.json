@@ -31,6 +31,14 @@
         "Booleans",
         "Arithmetic"
       ]
+    },
+    {
+      "slug": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "Export Modifiers",
+        "Vectors"
+      ]
     }
   ]
 }
