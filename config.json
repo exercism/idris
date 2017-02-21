@@ -22,6 +22,15 @@
         "optional values",
         "text formatting"
       ]
+    },
+    {
+      "slug": "leap",
+      "difficulty": 1,
+      "topics": [
+        "Integers",
+        "Booleans",
+        "Arithmetic"
+      ]
     }
   ]
 }
