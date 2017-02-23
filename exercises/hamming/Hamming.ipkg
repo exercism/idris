@@ -1,0 +1,5 @@
+package hamming
+
+sourcedir = src
+modules = Hamming, Test.Hamming
+tests = Test.Hamming.runTests
