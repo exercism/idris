@@ -3,7 +3,7 @@ module Hamming
 import Data.Vect
 
 -- Add the correct export modifier here...
-data Nucleotide = A | C | G | T
+data Nucleotide -- insert definition here
 
 -- Add the correct export modifier here...
 hamming_distance : Vect n Nucleotide -> Vect n Nucleotide -> Nat
