@@ -3,7 +3,7 @@ pkg   := Leap
 
 .PHONY: build clean clobber install rebuild test
 
-all: build
+all: test
 
 build:
 	@ ${idris} --build ${pkg}.ipkg
