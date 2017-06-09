@@ -11,10 +11,10 @@ cache:
     - $HoME/.cabal
 
 install:
+  - bin/fetch-configlet
   - bin/fetch-stack.sh
   - stack --resolver $RESOLVER setup
   - travis_wait 60 stack --resolver $RESOLVER install idris
 
 script:
-  - bin/fetch-configlet
   - bin/configlet .
