@@ -8,14 +8,14 @@ cache:
   directories:
     - $HOME/.local
     - $HOME/.stack
-    - $HoME/.cabal
+    - $HOME/.cabal
 
 install:
   - bin/fetch-configlet
   - bin/fetch-stack.sh
   - bin/fetch-exercism-infra.sh
   - stack --resolver $RESOLVER setup
-  - travis_wait 60 stack --resolver $RESOLVER install idris
+  - "[[ $(which idris) != '' ]] || travis_wait 60 stack --resolver $RESOLVER install idris"
 
 script:
   - bin/configlet .
