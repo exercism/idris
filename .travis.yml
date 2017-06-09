@@ -4,6 +4,12 @@ env:
   global:
     - RESOLVER=lts-8.17
 
+cache:
+  directories:
+    - $HOME/.local
+    - $HOME/.stack
+    - $HoME/.cabal
+
 install:
   - bin/fetch-stack.sh
   - stack --resolver $RESOLVER setup
