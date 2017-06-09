@@ -1,6 +1,7 @@
 language: haskell
 
 install:
+  - cabal install stack
   - stack install idris
 
 script:
