@@ -1,4 +1,7 @@
-language: bash
+language: haskell
+
+install:
+  - stack install idris
 
 script:
   - bin/fetch-configlet
