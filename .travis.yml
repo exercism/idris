@@ -13,7 +13,7 @@ cache:
 install:
   - bin/fetch-stack.sh
   - stack --resolver $RESOLVER setup
-  - stack --resolver $RESOLVER install idris
+  - travis_wait 60 stack --resolver $RESOLVER install idris
 
 script:
   - bin/fetch-configlet
