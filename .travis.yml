@@ -1,9 +1,13 @@
 language: haskell
 
+env:
+  global:
+    - RESOLVER=lts-8.17
 
 install:
   - bin/fetch-stack.sh
-  - stack install idris
+  - stack --resolver $RESOLVER setup
+  - stack --resolver $RESOLVER install idris
 
 script:
   - bin/fetch-configlet
