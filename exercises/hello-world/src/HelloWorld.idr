@@ -1,4 +1,9 @@
 module HelloWorld
 
 export
-greet : Maybe String -> String
+hello : String
+hello = ?hello_rhs
+
+export
+version : String
+version = "1.0.0"

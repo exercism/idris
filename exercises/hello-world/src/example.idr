@@ -1,5 +1,9 @@
 module HelloWorld
 
 export
-greet : Maybe String -> String
-greet subject = "Hello, " ++ fromMaybe "World" subject ++ "!"
+hello : String
+hello = "Hello, World!"
+
+export
+version : String
+version = "1.0.0"
