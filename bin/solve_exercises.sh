@@ -51,7 +51,7 @@ for i in $green; do
     echo " * ${i}"
 done
 
-echo -e "\n\n"
+echo -e "\n\nBAD:"
 for i in $red; do
     echo " * ${i}"
 done
