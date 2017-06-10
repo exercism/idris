@@ -2,9 +2,17 @@ module Hamming
 
 import Data.Vect
 
--- Add the correct export modifier here...
-data Nucleotide -- insert definition here
+public export
+data Nucleotide = A | C | G | T
 
--- Add the correct export modifier here...
-hamming_distance : Vect n Nucleotide -> Vect n Nucleotide -> Nat
+public export
+implementation Eq Nucleotide where
+    l == r = ?eq_rhs
+
+export
+hamming_distance : Eq a => Vect n a -> Vect n a -> Nat
 hamming_distance s1 s2 = ?hamming_distance_rhs
+
+export
+version : String
+version = "1.0.0"
