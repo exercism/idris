@@ -47,12 +47,12 @@ done
 set +x
 
 echo "GOOD:"
-for i in $green; do
+for i in ${green[@]}; do
     echo " * ${i}"
 done
 
 echo -e "\n\nBAD:"
-for i in $red; do
+for i in ${red[@]}; do
     echo " * ${i}"
 done
 
