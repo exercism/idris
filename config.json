@@ -6,11 +6,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "_src",
-    "bin",
-    "docs"
-  ],
   "foregone": [
 
   ],
