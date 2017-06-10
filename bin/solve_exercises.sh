@@ -14,6 +14,10 @@ current_exercise_number=1
 
 pushd ${exercism_home}
 
+green=()
+red=()
+exit_code=0
+
 for exercise in $exercises; do
     percentage=$(((current_exercise_number - 1) * 100 / total_exercises))
     set +x
@@ -29,8 +33,27 @@ for exercise in $exercises; do
     cp ${exercise_example} ${exercise_implementation}
 
     pushd ${exercism_home}/idris/${exercise}
-    make test
+    if make test; then
+        green+=(${exercise})
+    else
+        red+=(${exercise})
+        exit_code=$((exit_code + 1))
+    fi        
     popd
 
     current_exercise_number=$((current_exercise_number + 1))
 done
+
+set +x
+
+echo "GOOD:"
+for i in $green; do
+    echo " * ${i}"
+done
+
+echo -e "\n\n"
+for i in $red; do
+    echo " * ${i}"
+done
+
+exit $exit_code
