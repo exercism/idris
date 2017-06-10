@@ -25,7 +25,7 @@ for exercise in $exercises; do
 
     ${exercism_command} fetch idris ${exercise} # TODO: track name!
     exercise_implementation=$(ls ${exercism_home}/idris/${exercise}/src/*.idr)
-    exercise_example=${xtrack_home}/${exercise}/src/example.idr
+    exercise_example=${xtrack_home}/exercises/${exercise}/src/example.idr
     cp ${exercise_example} ${exercise_implementation}
 
     pushd ${exercism_home}/idris/${exercise}
