@@ -21,3 +21,4 @@ install:
 
 script:
   - bin/configlet .
+  - bin/solve_exercises.sh

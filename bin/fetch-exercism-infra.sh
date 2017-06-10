@@ -2,12 +2,12 @@
 
 set -x
 
-xtrack_home=$(pwd)
+export xtrack_home=$(pwd)
 build=${xtrack_home}/build
 
 xapi_home=${build}/x-api
 trackler_home=${build}/trackler
-exercism_home=${build}/exercism
+export exercism_home=${build}/exercism
 
 ## Clone into X-API and trackler
 git clone "https://github.com/exercism/x-api" "${xapi_home}"
@@ -109,7 +109,7 @@ curl -s --Location ${download_url} > ${temp}
 ${unzip_command} ${exercism_home} ${unzip_from_file_option} ${temp}
 
 ## Configuration
-config_file=".journy-test.exercism.json"
+export config_file=".journy-test.exercism.json"
 port=9292
 
 export exercism_command="./exercism --config ${config_file}"
