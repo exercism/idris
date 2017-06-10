@@ -1,37 +1,28 @@
 module Test.Leap
 
+import Test.Assertions
+import System
+
 import Leap
 
-%access export
+collect : {default 0 acc : Nat} -> (List (IO Bool)) -> IO Nat
+collect {acc} []               = pure acc
+collect {acc} (test :: tests) = do
+    bool <- test
+    case bool of
+        True  => collect {acc=acc}   tests
+        False => collect {acc=S acc} tests
 
-assertBool : Bool -> Bool -> IO ()
-assertBool expected given = putStrLn $ if given == expected then "Test Passed" else "Test Failed"
-
-assertTrue : Bool -> IO ()
-assertTrue = assertBool True
-
-assertFalse : Bool -> IO ()
-assertFalse = assertBool False
-
--- year not divisible by 4: common year
-test2015 : IO ()
-test2015 = assertFalse (isLeap 2015)
-
--- year divisible by 4, not divisible by 100: leap year
-test2016 : IO ()
-test2016 = assertTrue (isLeap 2016)
-
--- year divisible by 100, not divisible by 400: common year
-test2100 : IO ()
-test2100 = assertFalse (isLeap 2100)
-
--- year divisible by 400: leap year
-test2000 : IO ()
-test2000 = assertTrue (isLeap 2000)
-
+export
 runTests : IO ()
 runTests = do
-    test2015
-    test2016
-    test2100
-    test2000
+    count <- collect
+        [ assertFalse (isLeap 2015)
+        , assertTrue  (isLeap 2016)
+        , assertFalse (isLeap 2100)
+        , assertTrue  (isLeap 2000)
+        , assertEquals version "1.0.0"
+        ]
+    case count of
+        Z => exitSuccess
+        _ => exitFailure
