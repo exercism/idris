@@ -2,7 +2,7 @@
 
 set -x
 
-exercises=$(ls exersises | sed 's|/||g')
+exercises=$(ls exercises | sed 's|/||g')
 total_exercises=$(echo ${exercises} | wc -w)
 current_exercise_number=1
 
