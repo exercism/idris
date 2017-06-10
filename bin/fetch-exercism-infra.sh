@@ -109,10 +109,10 @@ curl -s --Location ${download_url} > ${temp}
 ${unzip_command} ${exercism_home} ${unzip_from_file_option} ${temp}
 
 ## Configuration
-export config_file=".journy-test.exercism.json"
+config_file=".journy-test.exercism.json"
 port=9292
 
-export exercism_command="./exercism --config ${config_file}"
+exercism_command="./exercism --config ${config_file}"
 
 pushd ${exercism_home}
 ${exercism_command} configure --dir="${exercism_home}"
