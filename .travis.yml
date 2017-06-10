@@ -16,6 +16,7 @@ install:
   - rvm use 2.2.5
   - bin/fetch-configlet
   - bin/fetch-stack.sh
+  - bin/fetch-idris-testing.sh
   - bin/fetch-exercism-infra.sh
   - stack --resolver $RESOLVER setup
   - "[[ $(which idris) != '' ]] || travis_wait 60 stack --resolver $RESOLVER install idris"
