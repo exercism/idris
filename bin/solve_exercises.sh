@@ -2,6 +2,12 @@
 
 set -x
 
+xtrack_home=$(pwd)
+build=${xtrack_home}/build
+exercism_home=${build}/exercism
+config_file=".journy-test.exercism.json"
+exercism_command="./exercism --config ${config_file}"
+
 exercises=$(ls exercises | sed 's|/||g')
 total_exercises=$(echo ${exercises} | wc -w)
 current_exercise_number=1

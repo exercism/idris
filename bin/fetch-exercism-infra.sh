@@ -2,12 +2,12 @@
 
 set -x
 
-export xtrack_home=$(pwd)
+xtrack_home=$(pwd)
 build=${xtrack_home}/build
 
 xapi_home=${build}/x-api
 trackler_home=${build}/trackler
-export exercism_home=${build}/exercism
+exercism_home=${build}/exercism
 
 ## Clone into X-API and trackler
 git clone "https://github.com/exercism/x-api" "${xapi_home}"
