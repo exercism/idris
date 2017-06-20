@@ -1,7 +1,7 @@
 {
   "slug": "idris",
   "language": "Idris",
-  "repository": "https://github.com/exercism/xidris",
+  "repository": "https://github.com/exercism/idris",
   "active": false,
   "deprecated": [
 
