@@ -3,9 +3,6 @@
   "language": "Idris",
   "repository": "https://github.com/exercism/idris",
   "active": false,
-  "deprecated": [
-
-  ],
   "ignored": [
     "_src",
     "bin",
@@ -16,7 +13,10 @@
   ],
   "exercises": [
     {
+      "uuid": "b4b0db87-75a2-4c81-897f-b27d1fd4a7d6",
       "slug": "hello-world",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "optional values",
@@ -24,7 +24,10 @@
       ]
     },
     {
+      "uuid": "2c7ab2e7-d87a-41ee-a81e-7572d7872562",
       "slug": "leap",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "Integers",
@@ -33,7 +36,10 @@
       ]
     },
     {
+      "uuid": "7a1d481f-7f45-4646-81bc-7ca3c8cb5eb0",
       "slug": "hamming",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 2,
       "topics": [
         "Export Modifiers",
