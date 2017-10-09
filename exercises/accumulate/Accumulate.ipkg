@@ -1,0 +1,5 @@
+package accumulate
+
+sourcedir = src
+modules = Accumulate, Test.Accumulate
+tests = Test.Accumulate.runTests
