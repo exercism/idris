@@ -43,6 +43,18 @@
         "Export Modifiers",
         "Vectors"
       ]
+    },
+    {
+      "uuid": "612f5f98-09a6-9d80-5820-edeec5ce1e1544073ed",
+      "slug": "accumulate",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "Functions",
+        "Lists",
+        "Map"
+      ]
     }
   ]
 }
