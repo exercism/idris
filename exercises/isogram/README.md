@@ -13,7 +13,6 @@ Examples of isograms:
 
 The word *isograms*, however, is not an isogram, because the s repeats.
 
-If everything goes well, you will be ready to fetch your first real exercise.
 ## Source
 
 [https://en.wikipedia.org/wiki/Isogram](https://en.wikipedia.org/wiki/Isogram)
