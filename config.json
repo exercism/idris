@@ -52,6 +52,17 @@
       ],
       "unlocked_by": null,
       "uuid": "612f5f98-09a6-9d80-5820-edeec5ce1e1544073ed"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "isogram",
+      "topics": [
+        "lists",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "f4e9ad1b-9566-4180-be4f-ba58b14c733e"
     }
   ],
   "foregone": [],

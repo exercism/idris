@@ -1,0 +1,5 @@
+package Isogram
+
+sourcedir = src
+modules = Isogram, Test.Isogram
+tests = Test.Isogram.runTests
