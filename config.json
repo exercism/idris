@@ -1,7 +1,4 @@
 {
-  "slug": "idris",
-  "language": "Idris",
-  "repository": "https://github.com/exercism/xidris",
   "active": false,
   "deprecated": [
 
@@ -11,29 +8,57 @@
   ],
   "exercises": [
     {
+      "core": false,
+      "difficulty": 1,
       "slug": "hello-world",
-      "difficulty": 1,
       "topics": [
-        "optional values",
-        "text formatting"
-      ]
+        "optional_values",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "b4b0db87-75a2-4c81-897f-b27d1fd4a7d6"
     },
     {
+      "core": false,
+      "difficulty": 1,
       "slug": "leap",
-      "difficulty": 1,
       "topics": [
-        "Integers",
-        "Booleans",
-        "Arithmetic"
-      ]
+        "arithmetic",
+        "booleans",
+        "integers"
+      ],
+      "unlocked_by": null,
+      "uuid": "2c7ab2e7-d87a-41ee-a81e-7572d7872562"
     },
     {
-      "slug": "hamming",
+      "core": false,
       "difficulty": 2,
+      "slug": "hamming",
       "topics": [
-        "Export Modifiers",
-        "Vectors"
-      ]
+        "export_modifiers",
+        "vectors"
+      ],
+      "unlocked_by": null,
+      "uuid": "7a1d481f-7f45-4646-81bc-7ca3c8cb5eb0"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "accumulate",
+      "topics": [
+        "functions",
+        "lists",
+        "map"
+      ],
+      "unlocked_by": null,
+      "uuid": "612f5f98-09a6-9d80-5820-edeec5ce1e1544073ed"
     }
-  ]
+  ],
+  "foregone": [],
+  "ignored": [
+    "_src",
+    "bin",
+    "docs"
+  ],
+  "language": "Idris"
 }
