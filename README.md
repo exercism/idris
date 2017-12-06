@@ -1,4 +1,4 @@
-# xIdris
+# Exercism Idris Track
 
 Exercism problems in Idris.
 
