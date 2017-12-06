@@ -1,5 +1,11 @@
 {
   "active": false,
+  "deprecated": [
+
+  ],
+  "foregone": [
+
+  ],
   "exercises": [
     {
       "core": false,
