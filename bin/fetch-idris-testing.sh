@@ -3,7 +3,7 @@
 set -x
 
 mkdir -p build
-git clone https://github.com/jfdm/idris-testing.git build/idris-testing
+git clone https://github.com/yurrriq/idris-testing.git build/idris-testing
 
 pushd build/idris-testing
 make lib
