@@ -1,7 +1,15 @@
-To run tests from the command line:
+## GNU Make
 
-```bash
-idris --testpkg HelloWorld.ipkg
+There is a `Makefile` provided with every exercise, so it is sufficient to simply run
+
+```shell
+make
 ```
 
-(Replace `HelloWorld.ipkg` with the `.ipkg` file in the root directory of each exercise.)
+## Idris-PKG
+
+The `Makefile` mentioned above is just a wrapper around the `idris` executable, which has some simple package management stuff built in.
+
+```shell
+idris --testpkg *.ipkg
+```

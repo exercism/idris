@@ -19,6 +19,7 @@ install:
   - bin/fetch-exercism-infra.sh
   - stack --resolver $RESOLVER setup
   - "[[ $(which idris) != '' ]] || travis_wait 60 stack --resolver $RESOLVER install idris"
+  - bin/fetch-idris-testing.sh
 
 script:
   - bin/configlet lint .

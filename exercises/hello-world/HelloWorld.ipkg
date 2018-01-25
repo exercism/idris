@@ -1,5 +1,7 @@
 package helloworld
 
+pkgs = test
+
 sourcedir = src
 modules = HelloWorld, Test.HelloWorld
 tests = Test.HelloWorld.runTests

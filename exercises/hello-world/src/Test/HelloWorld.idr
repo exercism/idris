@@ -1,25 +1,25 @@
 module Test.HelloWorld
 
+import Test.Assertions
+import System
+
 import HelloWorld
 
-%access export
+collect : {default 0 acc : Nat} -> (List (IO Bool)) -> IO Nat
+collect {acc} []               = pure acc
+collect {acc} (test :: tests) = do
+    bool <- test
+    case bool of
+        True  => collect {acc=acc}   tests
+        False => collect {acc=S acc} tests
 
-assertEq : Eq a => (given : a) -> (expected : a) -> IO ()
-assertEq g e = putStrLn $ if g == e
-                             then "Test Passed"
-                             else "Test Failed"
-
-testNothing : IO ()
-testNothing = assertEq (greet Nothing) "Hello, World!"
-
-testJustAlice : IO ()
-testJustAlice = assertEq (greet (Just "Alice")) "Hello, Alice!"
-
-testJustBob : IO ()
-testJustBob = assertEq (greet (Just "Bob")) "Hello, Bob!"
-
+export
 runTests : IO ()
 runTests = do
-    testNothing
-    testJustAlice
-    testJustBob
+    count <- collect
+        [ assertEquals hello   "Hello, World!"
+        , assertEquals version "1.0.0"
+        ]
+    case count of
+        Z => exitSuccess
+        _ => exitFailure

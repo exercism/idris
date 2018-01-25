@@ -2,4 +2,8 @@ module Leap
 
 export 
 isLeap : Int -> Bool
-isLeap year = ?is_leap_year
+isLeap year = ?isLeap_rhs
+
+export
+version : String
+version = "1.0.0"
