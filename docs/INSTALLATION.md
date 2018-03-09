@@ -13,8 +13,8 @@ The easiest way to install Idris, if you have all of the prerequisites, is to ty
 cabal update; cabal install idris
 ```
 
-This will install the latest version released on Hackage, along with any dependencies. 
-If, however, you would like the most up to date development version you can find it, 
+This will install the latest version released on Hackage, along with any dependencies.
+If, however, you would like the most up to date development version you can find it,
 as well as build instructions, on GitHub at: https://github.com/idris-lang/Idris-dev.
 
 ## Necessary libraries
@@ -27,7 +27,7 @@ This library provides the actual testing framework we use. It's installation is 
 
 ```shell
 pushd /tmp
-git clone git clone git@github.com:jfdm/idris-testing.git
+git clone git@github.com:jfdm/idris-testing.git
 cd idris-testing
 make lib
 make install # depending on your installation of idris this might need to be run as root
