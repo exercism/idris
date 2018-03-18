@@ -1,49 +1,32 @@
 module Test.Isogram
 
+import Test.Assertions
+import System
+
 import Isogram
 
-%access export
+collect : {default 0 acc : Nat} -> (List (IO Bool)) -> IO Nat
+collect {acc} []              = pure acc
+collect {acc} (test :: tests) = do
+    bool <- test
+    case bool of
+        True  => collect {acc=acc}   tests
+        False => collect {acc=S acc} tests
 
-assertEq : Eq a => (given : a) -> (expected : a) -> IO ()
-assertEq g e = putStrLn $ if g == e
-                             then "Test Passed"
-                             else "Test Failed"
-
-testEmptyString : IO ()
-testEmptyString = assertEq True $ isogram ""
-
-testIsogramWithOnlyLowerCaseCharacters : IO ()
-testIsogramWithOnlyLowerCaseCharacters = assertEq True $ isogram "isogram"
-
-testWordWithOneDuplicatedCharacter : IO ()
-testWordWithOneDuplicatedCharacter = assertEq False $ isogram "eleven"
-
-testLongestReportedEnglishIsogram : IO ()
-testLongestReportedEnglishIsogram = assertEq True $ isogram "subdermatoglyphic"
-
-testWordWithDuplicatedCharacterInMixedCase : IO ()
-testWordWithDuplicatedCharacterInMixedCase = assertEq False $ isogram "Alphabet"
-
-testHypotheticalIsogramicWordWithHyphen : IO ()
-testHypotheticalIsogramicWordWithHyphen = assertEq True $ isogram "thumbscrew-japingly"
-
-testIsogramWithDuplicatedHyphen : IO ()
-testIsogramWithDuplicatedHyphen = assertEq True $ isogram "six-year-old"
-
-testMadeupNameThatIsAnIsogram : IO ()
-testMadeupNameThatIsAnIsogram = assertEq True $ isogram "Emily Jung Schwartzkopf"
-
-testDuplicatedCharacterInTheMiddle : IO ()
-testDuplicatedCharacterInTheMiddle = assertEq False $ isogram "accentor"
-
+export
 runTests : IO ()
 runTests = do
-    testEmptyString
-    testIsogramWithOnlyLowerCaseCharacters
-    testWordWithOneDuplicatedCharacter
-    testLongestReportedEnglishIsogram
-    testWordWithDuplicatedCharacterInMixedCase
-    testHypotheticalIsogramicWordWithHyphen
-    testIsogramWithDuplicatedHyphen
-    testMadeupNameThatIsAnIsogram
-    testDuplicatedCharacterInTheMiddle
+    count <- collect
+        [ assertEquals (isogram "")                        True
+        , assertEquals (isogram "isogram")                 True
+        , assertEquals (isogram "eleven")                  False
+        , assertEquals (isogram "subdermatoglyphic")       True
+        , assertEquals (isogram "Alphabet")                False 
+        , assertEquals (isogram "thumbscrew-japingly")     True
+        , assertEquals (isogram "six-year-old")            True
+        , assertEquals (isogram "Emily Jung Schwartzkopf") True
+        , assertEquals (isogram "accentor")                False
+        ]
+    case count of
+        Z => exitSuccess
+        _ => exitFailure

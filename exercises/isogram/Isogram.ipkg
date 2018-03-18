@@ -1,5 +1,7 @@
 package Isogram
 
+pkgs = test
+
 sourcedir = src
 modules = Isogram, Test.Isogram
 tests = Test.Isogram.runTests
