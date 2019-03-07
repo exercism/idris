@@ -9,8 +9,8 @@ exercises=$(ls exercises | sed 's|/||g')
 total_exercises=$(echo ${exercises} | wc -w)
 current_exercise_number=1
 
-green=()
-red=()
+local -a green=()
+local -a red=()
 exit_code=0
 
 for exercise in $exercises; do
@@ -24,9 +24,9 @@ for exercise in $exercises; do
 
     pushd "exercises/${exercise}"
 
-    exercise_implementation=$(ls src/*.idr)
-    exercise_example=src/Example.idr
-    cp ${exercise_example} ${exercise_implementation}
+    pushd example
+    cp *.idr ../src
+    popd
 
     if make test; then
         green+=(${exercise})
