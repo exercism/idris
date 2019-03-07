@@ -1,18 +1,13 @@
 #!/usr/bin/env bash
 
 set -x
+set -o nounset
 
-xtrack_home=$(pwd)
-build=${xtrack_home}/build
-exercism_home=${build}/exercism
-config_file=".journy-test.exercism.json"
-exercism_command="./exercism --config ${config_file}"
+track_home=$(pwd)
 
 exercises=$(ls exercises | sed 's|/||g')
 total_exercises=$(echo ${exercises} | wc -w)
 current_exercise_number=1
-
-pushd ${exercism_home}
 
 green=()
 red=()
@@ -27,18 +22,18 @@ for exercise in $exercises; do
     echo "============================================="
     set -x
 
-    ${exercism_command} fetch idris ${exercise} # TODO: track name!
-    exercise_implementation=$(ls ${exercism_home}/idris/${exercise}/src/*.idr)
-    exercise_example=${xtrack_home}/exercises/${exercise}/src/Example.idr
+    pushd "exercises/${exercise}"
+
+    exercise_implementation=$(ls src/*.idr)
+    exercise_example=src/Example.idr
     cp ${exercise_example} ${exercise_implementation}
 
-    pushd ${exercism_home}/idris/${exercise}
     if make test; then
         green+=(${exercise})
     else
         red+=(${exercise})
         exit_code=$((exit_code + 1))
-    fi        
+    fi
     popd
 
     current_exercise_number=$((current_exercise_number + 1))
