@@ -5,18 +5,14 @@ env:
     - RESOLVER=lts-8.17
 
 cache:
-  bundler: true
   directories:
     - $HOME/.local
     - $HOME/.stack
     - $HOME/.cabal
 
 install:
-  - rvm install 2.2.5
-  - rvm use 2.2.5
   - bin/fetch-configlet
   - bin/fetch-stack.sh
-  - bin/fetch-exercism-infra.sh
   - stack --resolver $RESOLVER setup
   - "[[ $(which idris) != '' ]] || travis_wait 60 stack --resolver $RESOLVER install idris"
   - bin/fetch-idris-testing.sh
