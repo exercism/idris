@@ -16,6 +16,7 @@ install:
   - stack --resolver $RESOLVER setup
   - "[[ $(which idris) != '' ]] || travis_wait 60 stack --resolver $RESOLVER install idris"
   - bin/fetch-idris-testing.sh
+  - idris --version
 
 script:
   - bin/configlet lint .
