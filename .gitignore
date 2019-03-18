@@ -1,6 +1,8 @@
 *.swp
 .DS_Store
+elba.lock
 bin/configlet
 bin/configlet.exe
 *.ibc
 *.o
+target/

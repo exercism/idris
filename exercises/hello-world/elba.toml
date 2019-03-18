@@ -1,0 +1,19 @@
+[package]
+name = "exercism/hello-world"
+version = "0.1.0"
+authors = []
+
+[[targets.test]]
+name = "test-hello-world"
+main = "tests/HelloWorldTest.idr"
+
+[dependencies]
+
+[dev_dependencies]
+"pheymann/specdris" = { git = "https://github.com/pheymann/specdris" }
+
+[targets.lib]
+path = "src"
+mods = [
+    "HelloWorld"
+]
