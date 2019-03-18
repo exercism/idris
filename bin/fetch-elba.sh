@@ -13,5 +13,5 @@ if ! [[ -d $path ]]; then
 fi
 
 if ! [[ -f "${path}/elba" ]]; then
-    curl -L ${RELEASE_URL} | tar x -C ${path} 'elba'
+    curl -L ${RELEASE_URL} | tar xz -C ${path} 'elba'
 fi
