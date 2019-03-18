@@ -2,7 +2,7 @@
 
 set -ex
 
-$path="${HOME}/.local/bin"
+path="${HOME}/.local/bin"
 ELBA_VERSION="0.2.0"
 TAR_FILE_NAME="elba-${ELBA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
 RELEASE_URL="https://github.com/elba/elba/releases/download/${ELBA_VERSION}/${TAR_FILE_NAME}"
