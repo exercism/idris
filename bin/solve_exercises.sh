@@ -27,7 +27,7 @@ for exercise in $exercises; do
     cp *.idr ../src
     popd
 
-    if make test; then
+    if elba test; then
         green+=(${exercise})
     else
         red+=(${exercise})
