@@ -7,12 +7,8 @@ data Nucleotide = A | C | G | T
 
 public export
 implementation Eq Nucleotide where
-    l == r = ?eq_rhs
+  n1 == n2 = ?eq_nucleotide
 
 export
-hamming_distance : Eq a => Vect n a -> Vect n a -> Nat
-hamming_distance s1 s2 = ?hamming_distance_rhs
-
-export
-version : String
-version = "1.0.0"
+hamming_distance : Vect n Nucleotide -> Vect n Nucleotide -> Nat
+hamming_distance s1 s2 = ?hamming_distance

@@ -14,10 +14,5 @@ implementation Eq Nucleotide where
   _ == _ = False
 
 export
-hamming_distance : Eq a => Vect n a -> Vect n a -> Nat
-hamming_distance s1 s2 = 
-  fst $ filter ((/=) 0) $ map (\(n1,n2) => if n1 == n2 then 0 else 1) $ zip s1 s2
-
-export
-version : String
-version = "1.0.0"
+hamming_distance : Vect n Nucleotide -> Vect n Nucleotide -> Nat
+hamming_distance s1 s2 = fst $ Data.Vect.filter (uncurry (/=)) $ zip s1 s2
