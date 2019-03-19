@@ -1,0 +1,19 @@
+[package]
+name = "exercism/accumulate"
+version = "0.1.0"
+authors = []
+
+[[targets.test]]
+name = "test-accumulate"
+main = "tests/AccumulateTest.idr"
+
+[dependencies]
+
+[dev_dependencies]
+"pheymann/specdris" = { git = "https://github.com/pheymann/specdris" }
+
+[targets.lib]
+path = "src"
+mods = [
+    "Accumulate"
+]

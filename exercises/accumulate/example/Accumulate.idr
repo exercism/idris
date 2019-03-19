@@ -1,6 +1,6 @@
 module Accumulate
 
 export
-accumulate : (a -> b) -> List a -> List b
-accumulate f [] = []
-accumulate f (x::xs) = f x :: accumulate f xs
+accumulate : (Int -> Int) -> List Int -> List Int
+accumulate _f []      = []
+accumulate f  (x::xs) = f x :: accumulate f xs
