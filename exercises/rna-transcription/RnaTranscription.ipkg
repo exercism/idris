@@ -1,5 +1,0 @@
-package rnatranscription
-
-sourcedir = src
-modules = RnaTranscription, Test.RnaTranscription
-tests = Test.RnaTranscription.runTests

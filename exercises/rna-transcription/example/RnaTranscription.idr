@@ -2,34 +2,45 @@ module RnaTranscription
 
 import Data.Vect
 
-%access export
-%default total
-
 namespace DnaStrand
   public export
-  data DnaStrand = A | C | T | G
+  data DnaStrand = A | C | G | T
 
-implementation Eq DnaStrand where
-  (==) A A = True
-  (==) C C = True
-  (==) T T = True
-  (==) G G = True
-  (==) _ _ = False
-
-namespace RnaStrand 
   public export
-  data RnaStrand = A | C | G | U
+  implementation Show DnaStrand where
+    show A = "A"
 
-implementation Eq RnaStrand where
-  (==) A A = True
-  (==) C C = True
-  (==) G G = True
-  (==) U U = True
-  (==) _ _ = False
-  
+  public export
+  implementation Eq DnaStrand where
+    A == A = True
+    C == C = True
+    G == G = True
+    T == T = True
+    _ == _ = False
+
+namespace RnaStrand
+  public export
+  data RnaStrand = U | G | C | A
+
+  public export
+  implementation Show RnaStrand where
+    show A = "A"
+
+  public export
+  implementation Eq RnaStrand where
+    U == U = True
+    G == G = True
+    C == C = True
+    A == A = True
+    _ == _ = False
+
+
+export
 toRna : Vect n DnaStrand -> Vect n RnaStrand
-toRna [] = []
-toRna (A :: xs) = U :: toRna xs
-toRna (C :: xs) = G :: toRna xs
-toRna (T :: xs) = A :: toRna xs
-toRna (G :: xs) = C :: toRna xs
+toRna = map transmute
+  where
+    transmute : DnaStrand -> RnaStrand
+    transmute A = U
+    transmute C = G
+    transmute G = C
+    transmute T = A
