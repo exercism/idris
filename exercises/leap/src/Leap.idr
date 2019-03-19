@@ -1,9 +1,8 @@
 module Leap
 
-export 
-isLeap : Int -> Bool
-isLeap year = ?isLeap_rhs
-
 export
-version : String
-version = "1.0.0"
+isLeap : Int -> Bool
+isLeap year = (divBy 4 && not (divBy 100)) || divBy 400
+  where
+    divBy : Int -> Bool
+    divBy n = (year `mod` n) == 0
