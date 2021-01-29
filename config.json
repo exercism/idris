@@ -1,5 +1,6 @@
 {
   "language": "Idris",
+  "slug": "idris",
   "active": false,
   "status": {
     "concept_exercises": false,
