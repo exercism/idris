@@ -16,14 +16,15 @@
   },
   "exercises": [
     {
-      "slug": "rna-transcription",
-      "uuid": "3640da6c-4f1d-483c-8990-de225fcb0b03",
+      "slug": "accumulate",
+      "uuid": "06242da7-4796-482a-a467-358b22128c32",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "pattern_matching",
-        "vectors"
+        "functions",
+        "lists",
+        "map"
       ]
     },
     {
@@ -51,6 +52,17 @@
       ]
     },
     {
+      "slug": "rna-transcription",
+      "uuid": "3640da6c-4f1d-483c-8990-de225fcb0b03",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_matching",
+        "vectors"
+      ]
+    },
+    {
       "slug": "hamming",
       "uuid": "7a1d481f-7f45-4646-81bc-7ca3c8cb5eb0",
       "core": false,
@@ -59,18 +71,6 @@
       "topics": [
         "export_modifiers",
         "vectors"
-      ]
-    },
-    {
-      "slug": "accumulate",
-      "uuid": "06242da7-4796-482a-a467-358b22128c32",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "functions",
-        "lists",
-        "map"
       ]
     }
   ]
