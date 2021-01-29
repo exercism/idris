@@ -2,6 +2,7 @@
   "language": "Idris",
   "active": false,
   "blurb": "",
+  "version": 3,
   "exercises": [
     {
       "slug": "rna-transcription",
