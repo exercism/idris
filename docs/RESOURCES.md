@@ -1,4 +1,4 @@
-## Useful resources
+# Useful resources
 
  * The [official homepage](http://www.idris-lang.org/) and [documentation](http://docs.idris-lang.org/en/latest/index.html)
  * The [Github repository](https://github.com/idris-lang/Idris-dev)

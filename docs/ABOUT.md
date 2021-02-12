@@ -1,3 +1,5 @@
+# About
+
 Idris is a general purpose pure functional programming language with [dependent types](http://en.wikipedia.org/wiki/Dependent_type). 
 Dependent types allow types to be predicated on values, 
 meaning that some aspects of a program’s behaviour can be specified precisely in the type. 

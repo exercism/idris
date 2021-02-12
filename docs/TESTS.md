@@ -1,3 +1,5 @@
+# Tests
+
 ## GNU Make
 
 There is a `Makefile` provided with every exercise, so it is sufficient to simply run

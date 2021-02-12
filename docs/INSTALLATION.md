@@ -1,3 +1,5 @@
+# Installation
+
 ## Prerequisites
 
 Before installing Idris, you will need to make sure you have all of the necessary libraries and tools. You will need:
