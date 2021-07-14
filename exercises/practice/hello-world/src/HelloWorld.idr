@@ -2,7 +2,7 @@ module HelloWorld
 
 export
 hello : String
-hello = ?hello_rhs
+hello = "Goodbye, Mars!"
 
 export
 version : String
