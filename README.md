@@ -1,13 +1,7 @@
 # Exercism Idris Track
 
-Exercism problems in Idris.
+## Status
 
-## TODO
+Some work has been done to configure this track, and there are 5 implemented practice exercises.
 
-_Document how to contribute to the Idris track._
-
-## Contributing Guide
-
-Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
-
-
+If you wish to work on this track, please post in the [Exercism Community Forum](https://forum.exercism.org/c/exercism/building-exercism/125) to discuss it with the team.
