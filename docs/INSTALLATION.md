@@ -4,8 +4,8 @@
 
 Before installing Idris, you will need to make sure you have all of the necessary libraries and tools. You will need:
 
- *  A fairly recent Haskell platform. Version 2013.2.0.0 should be sufficiently recent, though it is better to be completely up to date.
- *  The GNU Multiple Precision Arithmetic Library (GMP) is available from MacPorts/Homebrew and all major Linux distributions.
+- A fairly recent Haskell platform. Version 2013.2.0.0 should be sufficiently recent, though it is better to be completely up to date.
+- The GNU Multiple Precision Arithmetic Library (GMP) is available from MacPorts/Homebrew and all major Linux distributions.
 
 ## Idris
 
