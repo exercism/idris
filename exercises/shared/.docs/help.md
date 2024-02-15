@@ -1,13 +1,3 @@
-# {{ .Spec.Name }}
+# Help
 
-{{ .Spec.Description -}}
-{{- with .Hints }}
-{{ . }}
-{{ end }}
-{{- with .Spec.Credits -}}
-## Source
-
-{{ . }}
-{{ end }}
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+TODO
