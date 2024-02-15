@@ -30,7 +30,6 @@
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "accumulate",
@@ -95,8 +94,5 @@
         ]
       }
     ]
-  },
-  "concepts": [],
-  "key_features": [],
-  "tags": []
+  }
 }
