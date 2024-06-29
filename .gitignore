@@ -4,3 +4,5 @@ bin/configlet
 bin/configlet.exe
 *.ibc
 *.o
+build/
+*.*~
