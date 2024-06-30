@@ -1,0 +1,10 @@
+[custom.all.hello-world]
+type = "local"
+path = "."
+ipkg = "hello-world.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.hello-world-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

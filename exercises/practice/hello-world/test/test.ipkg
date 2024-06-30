@@ -1,0 +1,6 @@
+package hello-world-test
+depends = hello-world
+  , tester
+main = Main
+executable = "hello-world-test"
+sourcedir = "src"
