@@ -1,25 +1,20 @@
-module Test.HelloWorld
+module Main
 
-import Test.Assertions
 import System
+import Tester
+import Tester.Runner
 
 import HelloWorld
 
-collect : {default 0 acc : Nat} -> (List (IO Bool)) -> IO Nat
-collect {acc} []               = pure acc
-collect {acc} (test :: tests) = do
-    bool <- test
-    case bool of
-        True  => collect {acc=acc}   tests
-        False => collect {acc=S acc} tests
+tests : List Test
+tests = 
+  [ test "hello should have correct value" $ do
+      assertEq hello "Hello, World!"
+  ]
 
-export
-runTests : IO ()
-runTests = do
-    count <- collect
-        [ assertEquals hello   "Hello, World!"
-        , assertEquals version "1.0.0"
-        ]
-    case count of
-        Z => exitSuccess
-        _ => exitFailure
+main : IO ()
+main = do
+  success <- runTests tests
+  if success
+     then putStrLn "All tests passed"
+     else exitFailure
