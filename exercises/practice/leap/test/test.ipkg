@@ -1,0 +1,6 @@
+package leap-test
+depends = leap
+  , tester
+main = Main
+executable = "leap-test"
+sourcedir = "src"

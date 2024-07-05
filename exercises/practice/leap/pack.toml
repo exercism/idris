@@ -1,0 +1,10 @@
+[custom.all.leap]
+type = "local"
+path = "."
+ipkg = "leap.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.leap-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
