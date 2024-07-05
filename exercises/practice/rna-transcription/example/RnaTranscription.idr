@@ -2,13 +2,13 @@ module RnaTranscription
 
 import Data.Vect
 
-%access export
 %default total
 
 namespace DnaStrand
   public export
   data DnaStrand = A | C | T | G
 
+export
 implementation Eq DnaStrand where
   (==) A A = True
   (==) C C = True
@@ -20,6 +20,7 @@ namespace RnaStrand
   public export
   data RnaStrand = A | C | G | U
 
+export
 implementation Eq RnaStrand where
   (==) A A = True
   (==) C C = True
@@ -27,6 +28,7 @@ implementation Eq RnaStrand where
   (==) U U = True
   (==) _ _ = False
   
+export
 toRna : Vect n DnaStrand -> Vect n RnaStrand
 toRna [] = []
 toRna (A :: xs) = U :: toRna xs

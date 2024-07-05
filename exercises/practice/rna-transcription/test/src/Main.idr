@@ -1,9 +1,7 @@
-module Test.RnaTranscription
+module Main
 
 import RnaTranscription 
 import Data.Vect
-
-%access export
 
 assertCase : Eq b => (a -> b) -> (String, a, b) -> IO ()
 assertCase fn (desc,given,expected) = do
@@ -20,8 +18,8 @@ testCases = [(_ ** ("RNA complement of cytosine is guanine", [C],               
              (_ ** ("RNA complement of adenine is uracil",   [A],                       [U])),
              (_ ** ("RNA complement",                        [A,C,G,T,G,G,T,C,T,T,A,A], [U,G,C,A,C,C,A,G,A,A,U,U]))]
 
-runTests : IO ()
-runTests = traverse_ testCase' testCases
+main : IO ()
+main = traverse_ testCase' testCases
   where testCase' : (n : Nat ** (String, Vect n DnaStrand, Vect n RnaStrand)) -> IO ()
         testCase' (x ** pf) = assertCase toRna pf
 

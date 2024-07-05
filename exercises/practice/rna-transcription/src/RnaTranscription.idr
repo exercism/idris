@@ -2,16 +2,20 @@ module RnaTranscription
 
 import Data.Vect
 
-%access export
 %default total
 
 namespace DnaStrand
   public export
-  data DnaStrand
+  data DnaStrand = Foo
 
 namespace RnaStrand 
   public export
-  data RnaStrand
+  data RnaStrand = Bar
 
+export
+implementation Eq RnaStrand where
+  (==) x y = ?RnaStrandEqRhs
+
+export
 toRna : Vect n DnaStrand -> Vect n RnaStrand
 toRna = ?toRna_rhs
