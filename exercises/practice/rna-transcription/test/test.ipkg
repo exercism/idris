@@ -1,0 +1,5 @@
+package rna-transcription-test
+depends = rna-transcription
+main = Main
+executable = "rna-transcription-test"
+sourcedir = "src"
