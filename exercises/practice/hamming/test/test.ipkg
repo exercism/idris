@@ -1,0 +1,6 @@
+package hamming-test
+depends = hamming
+  , tester
+main = Main
+executable = "hamming-test"
+sourcedir = "src"
