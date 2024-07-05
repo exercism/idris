@@ -94,5 +94,11 @@
         ]
       }
     ]
-  }
+  },
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "typing/static",
+    "typing/strong"
+  ]
 }
