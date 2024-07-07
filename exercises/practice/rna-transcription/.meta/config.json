@@ -12,7 +12,7 @@
       "src/RnaTranscription.idr"
     ],
     "test": [
-      "src/Test/RnaTranscription.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/RnaTranscription.idr"

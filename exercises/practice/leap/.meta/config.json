@@ -11,7 +11,7 @@
       "src/Leap.idr"
     ],
     "test": [
-      "src/Test/Leap.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/Leap.idr"

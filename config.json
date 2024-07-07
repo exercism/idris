@@ -20,7 +20,7 @@
       "src/%{pascal_slug}.idr"
     ],
     "test": [
-      "src/Test/%{pascal_slug}.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/%{pascal_slug}.idr"

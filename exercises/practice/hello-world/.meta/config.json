@@ -12,7 +12,7 @@
       "src/HelloWorld.idr"
     ],
     "test": [
-      "src/Test/HelloWorld.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/HelloWorld.idr"

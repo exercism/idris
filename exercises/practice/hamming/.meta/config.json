@@ -11,7 +11,7 @@
       "src/Hamming.idr"
     ],
     "test": [
-      "src/Test/Hamming.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/Hamming.idr"
