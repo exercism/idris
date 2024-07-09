@@ -1,7 +1,0 @@
-package hamming
-
-pkgs = test
-
-sourcedir = src
-modules = Hamming, Test.Hamming
-tests = Test.Hamming.runTests

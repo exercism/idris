@@ -1,8 +1,6 @@
-module Test.Accumulate
+module Main
 
 import Accumulate
-
-%access export
 
 assertEq : Eq a => String -> (given : a) -> (expected : a) -> IO ()
 assertEq label g e = putStrLn $ if g == e then label ++ ": Test Passed" else label ++ ": Test Failed"
@@ -25,8 +23,8 @@ testIncrementFunctionAddsOneToAllInput = assertEq "increment function adds 1 to 
 testDecrementFunctionAddsOneToAllInput : IO ()
 testDecrementFunctionAddsOneToAllInput = assertEq "decrement function subtracts 1 from input" (accumulate (\x => x - 1) [1,2,3]) (the (List Int) [0,1,2])
 
-runTests : IO ()
-runTests = do
+main : IO ()
+main = do
   testEmptyListDoesNothing
   testIdentityFunctionDoesNothing
   testSquareFunctionDoublesInput

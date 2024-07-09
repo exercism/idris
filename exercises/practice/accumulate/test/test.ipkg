@@ -1,0 +1,5 @@
+package accumulate-test
+depends = accumulate
+main = Main
+executable = "accumulate-test"
+sourcedir = "src"

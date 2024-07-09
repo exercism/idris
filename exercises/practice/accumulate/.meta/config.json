@@ -11,7 +11,7 @@
       "src/Accumulate.idr"
     ],
     "test": [
-      "src/Test/Accumulate.idr"
+      "test/src/Main.idr"
     ],
     "example": [
       "example/Accumulate.idr"

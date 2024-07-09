@@ -1,7 +1,0 @@
-package leap
-
-pkgs = test
-
-sourcedir = src
-modules = Leap, Test.Leap
-tests = Test.Leap.runTests

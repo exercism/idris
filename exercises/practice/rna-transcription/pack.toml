@@ -1,0 +1,10 @@
+[custom.all.rna-transcription]
+type = "local"
+path = "."
+ipkg = "rna-transcription.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.rna-transcription-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

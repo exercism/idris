@@ -1,0 +1,3 @@
+package hamming
+modules = Hamming
+sourcedir = "src"

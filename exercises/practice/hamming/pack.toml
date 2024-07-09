@@ -1,0 +1,10 @@
+[custom.all.hamming]
+type = "local"
+path = "."
+ipkg = "hamming.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.hamming-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
