@@ -10,14 +10,6 @@
   },
   "blurb": "Idris is a purely-functional programming language with dependent types, optional lazy evaluation, and features such as a totality checker. Idris may be used as a proof assistant, but it is designed to be a general-purpose programming language similar to Haskell.",
   "version": 3,
-  "tags": [
-    "paradigm/declarative",
-    "paradigm/functional",
-    "typing/static",
-    "typing/strong",
-    "execution_mode/compiled",
-    "platform/linux"
-  ],
   "online_editor": {
     "indent_style": "space",
     "indent_size": 4,
@@ -102,5 +94,13 @@
         ]
       }
     ]
-  }
+  },
+  "tags": [
+    "execution_mode/compiled",
+    "paradigm/declarative",
+    "paradigm/functional",
+    "platform/linux",
+    "typing/static",
+    "typing/strong"
+  ]
 }
