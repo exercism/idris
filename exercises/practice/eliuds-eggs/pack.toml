@@ -1,0 +1,10 @@
+[custom.all.eliuds-eggs]
+type = "local"
+path = "."
+ipkg = "eliuds-eggs.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.eliuds-eggs-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
