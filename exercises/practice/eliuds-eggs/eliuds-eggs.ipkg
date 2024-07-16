@@ -1,0 +1,3 @@
+package eliuds-eggs
+modules = EliudsEggs
+sourcedir = "src"

@@ -1,0 +1,6 @@
+package eliuds-eggs-test
+depends = eliuds-eggs
+  , tester
+main = Main
+executable = "eliuds-eggs-test"
+sourcedir = "src"
