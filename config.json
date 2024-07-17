@@ -70,6 +70,14 @@
         ]
       },
       {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "394b00eb-2d53-483e-b403-982400c58ea6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "rna-transcription",
         "name": "Rna Transcription",
         "uuid": "3640da6c-4f1d-483c-8990-de225fcb0b03",

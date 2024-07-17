@@ -1,0 +1,6 @@
+package reverse-string-test
+depends = reverse-string
+  , tester
+main = Main
+executable = "reverse-string-test"
+sourcedir = "src"
