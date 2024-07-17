@@ -1,0 +1,3 @@
+package micro-blog
+modules = MicroBlog
+sourcedir = "src"

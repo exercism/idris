@@ -1,0 +1,6 @@
+package micro-blog-test
+depends = micro-blog
+  , tester
+main = Main
+executable = "micro-blog-test"
+sourcedir = "src"

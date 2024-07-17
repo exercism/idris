@@ -108,6 +108,14 @@
           "export_modifiers",
           "vectors"
         ]
+      },
+      {
+        "slug": "micro-blog",
+        "name": "Micro Blog",
+        "uuid": "ee40797e-a326-4a82-b7b9-6d38e2a00d61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
