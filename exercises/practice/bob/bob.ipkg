@@ -1,0 +1,3 @@
+package bob
+modules = Bob
+sourcedir = "src"
