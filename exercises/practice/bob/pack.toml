@@ -1,0 +1,10 @@
+[custom.all.bob]
+type = "local"
+path = "."
+ipkg = "bob.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.bob-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

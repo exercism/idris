@@ -1,0 +1,6 @@
+package bob-test
+depends = bob
+  , tester
+main = Main
+executable = "bob-test"
+sourcedir = "src"
