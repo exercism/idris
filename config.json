@@ -15,6 +15,9 @@
     "indent_size": 4,
     "highlightjs_language": "haskell"
   },
+  "test_runner": {
+    "average_run_time": 4
+  },
   "files": {
     "solution": [
       "src/%{pascal_slug}.idr"
