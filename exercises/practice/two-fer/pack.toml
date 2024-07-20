@@ -1,0 +1,10 @@
+[custom.all.two-fer]
+type = "local"
+path = "."
+ipkg = "two-fer.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.two-fer-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
