@@ -1,0 +1,6 @@
+package collatz-conjecture-test
+depends = collatz-conjecture
+  , tester
+main = Main
+executable = "collatz-conjecture-test"
+sourcedir = "src"

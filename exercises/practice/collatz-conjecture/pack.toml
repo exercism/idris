@@ -1,0 +1,10 @@
+[custom.all.collatz-conjecture]
+type = "local"
+path = "."
+ipkg = "collatz-conjecture.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.collatz-conjecture-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
