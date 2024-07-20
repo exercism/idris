@@ -1,0 +1,10 @@
+[custom.all.matching-brackets]
+type = "local"
+path = "."
+ipkg = "matching-brackets.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.matching-brackets-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

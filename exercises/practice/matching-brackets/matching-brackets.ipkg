@@ -1,0 +1,3 @@
+package matching-brackets
+modules = MatchingBrackets
+sourcedir = "src"
