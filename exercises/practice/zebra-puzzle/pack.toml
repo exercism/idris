@@ -1,0 +1,10 @@
+[custom.all.zebra-puzzle]
+type = "local"
+path = "."
+ipkg = "zebra-puzzle.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.zebra-puzzle-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

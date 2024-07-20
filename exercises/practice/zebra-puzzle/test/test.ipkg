@@ -1,0 +1,6 @@
+package zebra-puzzle-test
+depends = zebra-puzzle
+  , tester
+main = Main
+executable = "zebra-puzzle-test"
+sourcedir = "src"

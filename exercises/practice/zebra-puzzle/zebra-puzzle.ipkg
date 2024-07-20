@@ -1,0 +1,3 @@
+package zebra-puzzle
+modules = ZebraPuzzle
+sourcedir = "src"
