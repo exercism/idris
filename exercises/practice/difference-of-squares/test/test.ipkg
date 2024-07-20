@@ -1,0 +1,6 @@
+package difference-of-squares-test
+depends = difference-of-squares
+  , tester
+main = Main
+executable = "difference-of-squares-test"
+sourcedir = "src"
