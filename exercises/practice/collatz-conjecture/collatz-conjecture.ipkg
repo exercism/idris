@@ -1,0 +1,3 @@
+package collatz-conjecture
+modules = CollatzConjecture
+sourcedir = "src"
