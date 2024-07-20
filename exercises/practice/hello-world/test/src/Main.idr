@@ -7,11 +7,11 @@ import Tester.Runner
 import HelloWorld
 
 tests : List Test
-tests = 
-  [ test "hello should have correct value" $ do
-      assertEq hello "Hello, World!"
+tests =
+  [ test "Say Hi!" (assertEq hello "Hello, World!")
   ]
 
+export
 main : IO ()
 main = do
   success <- runTests tests
