@@ -1,0 +1,3 @@
+package rotational-cipher
+modules = RotationalCipher
+sourcedir = "src"

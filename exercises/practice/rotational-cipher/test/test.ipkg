@@ -1,0 +1,6 @@
+package rotational-cipher-test
+depends = rotational-cipher
+  , tester
+main = Main
+executable = "rotational-cipher-test"
+sourcedir = "src"
