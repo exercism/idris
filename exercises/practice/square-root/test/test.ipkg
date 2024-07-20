@@ -1,0 +1,6 @@
+package square-root-test
+depends = square-root
+  , tester
+main = Main
+executable = "square-root-test"
+sourcedir = "src"
