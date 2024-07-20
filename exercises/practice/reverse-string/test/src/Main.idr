@@ -15,8 +15,6 @@ tests =
   , test "a palindrome"                (assertEq (rev "racecar") "racecar")
   , test "an even-sized word"          (assertEq (rev "drawer") "reward")
   , test "wide characters"             (assertEq (rev "子猫") "猫子")
---  , test "grapheme cluster with pre-combined form" (assertEq (rev "Würstchenstand") "dnatsnehctsrüW")
---  , test "grapheme clusters"                       (assertEq (rev "ผู้เขียนโปรแกรม") "มรกแรปโนยขีเผู้")
   ]
 
 export
