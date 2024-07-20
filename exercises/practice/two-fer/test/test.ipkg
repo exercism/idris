@@ -1,0 +1,6 @@
+package two-fer-test
+depends = two-fer
+  , tester
+main = Main
+executable = "two-fer-test"
+sourcedir = "src"

@@ -93,6 +93,14 @@
         ]
       },
       {
+        "slug": "two-fer",
+        "name": "Two-Fer",
+        "uuid": "2c69c975-daae-4dd6-911b-3579e0339f85",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "bob",
         "name": "Bob",
         "uuid": "9abcdd2a-9b53-4386-a68c-938be38316cb",
