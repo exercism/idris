@@ -1,0 +1,3 @@
+package difference-of-squares
+modules = DifferenceOfSquares
+sourcedir = "src"

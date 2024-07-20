@@ -1,0 +1,10 @@
+[custom.all.difference-of-squares]
+type = "local"
+path = "."
+ipkg = "difference-of-squares.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.difference-of-squares-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
