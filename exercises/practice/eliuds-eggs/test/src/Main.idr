@@ -7,11 +7,11 @@ import Tester.Runner
 import EliudsEggs
 
 tests : List Test
-tests = map (test "")
-  [ assertEq (eggCount 0) 0
-  , assertEq (eggCount 16) 1
-  , assertEq (eggCount 89) 4
-  , assertEq (eggCount 2000000000) 13
+tests =
+  [ test "0 eggs"  (assertEq (eggCount 0) 0)
+  , test "1 egg"   (assertEq (eggCount 16) 1)
+  , test "4 eggs"  (assertEq (eggCount 89) 4)
+  , test "13 eggs" (assertEq (eggCount 2000000000) 13)
   ]
 
 export
