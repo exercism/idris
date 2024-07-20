@@ -6,3 +6,5 @@ bin/configlet.exe
 *.o
 build/
 *.*~
+*.pyc
+__pycache__/
