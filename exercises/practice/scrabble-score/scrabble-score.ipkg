@@ -1,0 +1,3 @@
+package scrabble-score
+modules = ScrabbleScore
+sourcedir = "src"

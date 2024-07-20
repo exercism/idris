@@ -153,6 +153,14 @@
         "difficulty": 2
       },
       {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "8ec610fd-0700-4869-9f78-072fd39bace5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "68f1e19f-ea66-4604-9ab8-b15b786c76a5",
