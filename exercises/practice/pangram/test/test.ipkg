@@ -1,0 +1,6 @@
+package pangram-test
+depends = pangram
+  , tester
+main = Main
+executable = "pangram-test"
+sourcedir = "src"

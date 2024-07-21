@@ -1,0 +1,10 @@
+[custom.all.pangram]
+type = "local"
+path = "."
+ipkg = "pangram.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.pangram-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
