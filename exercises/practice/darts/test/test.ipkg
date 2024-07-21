@@ -1,0 +1,6 @@
+package darts-test
+depends = darts
+  , tester
+main = Main
+executable = "darts-test"
+sourcedir = "src"

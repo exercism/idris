@@ -117,6 +117,14 @@
         "difficulty": 2
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "6f5650e4-0cbb-486f-84bd-6799efc5086c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "difference-of-squares",
         "name": "Difference of Squares",
         "uuid": "d65ce143-9c7f-4e5d-86d1-8b3fef0b4404",
