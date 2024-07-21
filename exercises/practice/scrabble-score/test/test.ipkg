@@ -1,0 +1,6 @@
+package scrabble-score-test
+depends = scrabble-score
+  , tester
+main = Main
+executable = "scrabble-score-test"
+sourcedir = "src"

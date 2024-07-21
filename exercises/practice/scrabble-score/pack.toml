@@ -1,0 +1,10 @@
+[custom.all.scrabble-score]
+type = "local"
+path = "."
+ipkg = "scrabble-score.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.scrabble-score-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
