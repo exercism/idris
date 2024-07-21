@@ -1,0 +1,3 @@
+package prime-factors
+modules = PrimeFactors
+sourcedir = "src"

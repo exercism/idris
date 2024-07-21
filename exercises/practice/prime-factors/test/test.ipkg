@@ -1,0 +1,6 @@
+package prime-factors-test
+depends = prime-factors
+  , tester
+main = Main
+executable = "prime-factors-test"
+sourcedir = "src"

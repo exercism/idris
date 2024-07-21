@@ -1,0 +1,10 @@
+[custom.all.prime-factors]
+type = "local"
+path = "."
+ipkg = "prime-factors.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.prime-factors-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
