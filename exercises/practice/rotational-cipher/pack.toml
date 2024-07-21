@@ -1,0 +1,10 @@
+[custom.all.rotational-cipher]
+type = "local"
+path = "."
+ipkg = "rotational-cipher.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.rotational-cipher-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
