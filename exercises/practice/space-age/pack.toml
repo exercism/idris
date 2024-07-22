@@ -1,0 +1,10 @@
+[custom.all.space-age]
+type = "local"
+path = "."
+ipkg = "space-age.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.space-age-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

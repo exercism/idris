@@ -185,6 +185,14 @@
         "difficulty": 2
       },
       {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "f88316b1-8e57-4a03-a7cf-0afc1af808a6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "68f1e19f-ea66-4604-9ab8-b15b786c76a5",

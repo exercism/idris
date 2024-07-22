@@ -1,0 +1,3 @@
+package space-age
+modules = SpaceAge
+sourcedir = "src"
