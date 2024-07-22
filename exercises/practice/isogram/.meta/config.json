@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "src/Isogram.idr"
+    ],
+    "test": [
+      "test/src/Main.idr"
+    ],
+    "example": [
+      "example/Isogram.idr"
+    ]
+  },
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
+}
