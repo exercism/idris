@@ -1,0 +1,3 @@
+package pythagorean-triplet
+modules = PythagoreanTriplet
+sourcedir = "src"

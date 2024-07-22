@@ -54,6 +54,8 @@ def write_test_file(f, mod, exercise, cases):
 
     f.write(PREFIX)
     f.write(f"import {exercise_module}\n")
+    if hasattr(mod, "header"):
+        f.write(mod.header())
     f.write(f"\n")
     f.write(f"tests : List Test\n")
     f.write(f"tests =\n")
