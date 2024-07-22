@@ -1,0 +1,6 @@
+package matching-brackets-test
+depends = matching-brackets
+  , tester
+main = Main
+executable = "matching-brackets-test"
+sourcedir = "src"
