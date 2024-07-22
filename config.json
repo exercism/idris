@@ -161,6 +161,14 @@
         "difficulty": 2
       },
       {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "13f2750f-1979-46c6-b59e-6991537e4adb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "8ec610fd-0700-4869-9f78-072fd39bace5",
