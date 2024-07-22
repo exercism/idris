@@ -1,0 +1,6 @@
+package isogram-test
+depends = isogram
+  , tester
+main = Main
+executable = "isogram-test"
+sourcedir = "src"
