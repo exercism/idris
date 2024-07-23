@@ -1,0 +1,6 @@
+package space-age-test
+depends = space-age
+  , tester
+main = Main
+executable = "space-age-test"
+sourcedir = "src"
