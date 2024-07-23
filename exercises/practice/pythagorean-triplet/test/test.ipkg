@@ -1,0 +1,6 @@
+package pythagorean-triplet-test
+depends = pythagorean-triplet
+  , tester
+main = Main
+executable = "pythagorean-triplet-test"
+sourcedir = "src"

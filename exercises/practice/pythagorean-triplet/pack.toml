@@ -1,0 +1,10 @@
+[custom.all.pythagorean-triplet]
+type = "local"
+path = "."
+ipkg = "pythagorean-triplet.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.pythagorean-triplet-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
