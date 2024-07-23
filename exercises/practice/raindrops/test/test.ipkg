@@ -1,0 +1,6 @@
+package raindrops-test
+depends = raindrops
+  , tester
+main = Main
+executable = "raindrops-test"
+sourcedir = "src"

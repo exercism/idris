@@ -1,0 +1,10 @@
+[custom.all.raindrops]
+type = "local"
+path = "."
+ipkg = "raindrops.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.raindrops-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
