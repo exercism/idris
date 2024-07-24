@@ -3,7 +3,7 @@ module ResistorColor
 import Data.Vect
 
 export
-colorCode : String -> Fin 10
+colorCode : String -> Maybe (Fin 10)
 colorCode color = ?colorCode_rhs
 
 export

@@ -185,14 +185,6 @@
         "difficulty": 2
       },
       {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "78e88218-c23e-4210-8721-466768a819cd",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "8ec610fd-0700-4869-9f78-072fd39bace5",
@@ -220,6 +212,14 @@
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "9a9c1af3-2c53-4800-98d8-5eae375a8239",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "78e88218-c23e-4210-8721-466768a819cd",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3

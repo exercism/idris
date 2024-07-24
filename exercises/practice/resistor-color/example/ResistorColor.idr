@@ -1,6 +1,5 @@
 module ResistorColor
 
-import Data.Maybe
 import Data.Vect
 
 export
@@ -19,5 +18,5 @@ colors =
   ]
 
 export
-colorCode : String -> Fin 10
-colorCode color = fromMaybe 0 $ elemIndex color colors
+colorCode : String -> Maybe (Fin 10)
+colorCode color = elemIndex color colors
