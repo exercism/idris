@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "src/ZebraPuzzle.idr"
+    ],
+    "test": [
+      "test/src/Main.idr"
+    ],
+    "example": [
+      "example/ZebraPuzzle.idr"
+    ]
+  },
+  "blurb": "Solve the zebra puzzle.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle"
+}
