@@ -22,6 +22,8 @@ while [[ ${pascal} =~ (.*)-(.*) ]]; do
     pascal=${BASH_REMATCH[1]}${BASH_REMATCH[2]^}
 done
 
+snake="${slug//-/_}"
+
 if [[ -z $author ]]; then
     echo
     read -rp "What's your github username? " author
@@ -42,3 +44,5 @@ sed -e "s#hello-world#${slug}#g" exercises/practice/hello-world/hello-world.ipkg
     echo "module ${pascal}"
     echo
 } | tee exercises/practice/${slug}/src/${pascal}.idr > exercises/practice/${slug}/example/${pascal}.idr
+
+touch generators/exercises/${snake}.py
