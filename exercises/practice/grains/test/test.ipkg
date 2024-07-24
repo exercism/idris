@@ -1,0 +1,6 @@
+package grains-test
+depends = grains
+  , tester
+main = Main
+executable = "grains-test"
+sourcedir = "src"

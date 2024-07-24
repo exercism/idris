@@ -1,0 +1,3 @@
+package grains
+modules = Grains
+sourcedir = "src"
