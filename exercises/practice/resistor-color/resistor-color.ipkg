@@ -1,0 +1,3 @@
+package resistor-color
+modules = ResistorColor
+sourcedir = "src"

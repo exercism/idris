@@ -1,0 +1,6 @@
+package resistor-color-test
+depends = resistor-color
+  , tester
+main = Main
+executable = "resistor-color-test"
+sourcedir = "src"

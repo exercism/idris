@@ -57,6 +57,9 @@ def write_test_file(f, mod, exercise, cases):
     if hasattr(mod, "header"):
         f.write(mod.header())
     f.write(f"\n")
+    if hasattr(mod, "extra_cases"):
+        cases = cases[:]
+        cases.extend(mod.extra_cases())
     f.write(f"tests : List Test\n")
     f.write(f"tests =\n")
     separator = '['
