@@ -1,0 +1,10 @@
+[custom.all.armstrong-numbers]
+type = "local"
+path = "."
+ipkg = "armstrong-numbers.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.armstrong-numbers-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

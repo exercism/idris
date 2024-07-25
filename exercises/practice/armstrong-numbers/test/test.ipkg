@@ -1,0 +1,6 @@
+package armstrong-numbers-test
+depends = armstrong-numbers
+  , tester
+main = Main
+executable = "armstrong-numbers-test"
+sourcedir = "src"
