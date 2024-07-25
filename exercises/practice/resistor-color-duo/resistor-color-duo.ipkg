@@ -1,0 +1,3 @@
+package resistor-color-duo
+modules = ResistorColorDuo
+sourcedir = "src"

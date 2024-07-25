@@ -1,0 +1,6 @@
+package resistor-color-duo-test
+depends = resistor-color-duo
+  , tester
+main = Main
+executable = "resistor-color-duo-test"
+sourcedir = "src"
