@@ -1,5 +1,5 @@
 module ArmstrongNumbers
 
 export
-isArmstrongNumber : Nat -> Bool
+isArmstrongNumber : Integer -> Bool
 isArmstrongNumber number = ?isArmstrongNumber_rhs

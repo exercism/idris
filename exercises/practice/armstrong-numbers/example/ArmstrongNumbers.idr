@@ -3,10 +3,10 @@ module ArmstrongNumbers
 import Data.Nat
 
 export
-isArmstrongNumber : Nat -> Bool
-isArmstrongNumber number = number == powerSum (listDigits (cast number))
-  where listDigits : Integer -> List Nat
-        listDigits n = if n < 10 then [cast n] else (cast (mod n 10)) :: (listDigits (div n 10))
-        powerSum : List Nat -> Nat
-        powerSum digits = sum $ map (\digit => power digit len) digits
+isArmstrongNumber : Integer -> Bool
+isArmstrongNumber number = number == powerSum (listDigits number)
+  where listDigits : Integer -> List Integer
+        listDigits n = if n < 10 then [n] else (mod n 10) :: listDigits (div n 10)
+        powerSum : List Integer -> Integer
+        powerSum digits = cast $ sum $ map (\digit => power (cast digit) len) digits
           where len = length digits
