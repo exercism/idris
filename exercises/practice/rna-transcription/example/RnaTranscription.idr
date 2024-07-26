@@ -8,15 +8,7 @@ namespace DnaStrand
   public export
   data DnaStrand = A | C | T | G
 
-export
-implementation Eq DnaStrand where
-  (==) A A = True
-  (==) C C = True
-  (==) T T = True
-  (==) G G = True
-  (==) _ _ = False
-
-namespace RnaStrand 
+namespace RnaStrand
   public export
   data RnaStrand = A | C | G | U
 
@@ -27,7 +19,14 @@ implementation Eq RnaStrand where
   (==) G G = True
   (==) U U = True
   (==) _ _ = False
-  
+
+export
+implementation Show RnaStrand where
+  show A = "A"
+  show C = "C"
+  show G = "G"
+  show U = "U"
+
 export
 toRna : Vect n DnaStrand -> Vect n RnaStrand
 toRna [] = []
