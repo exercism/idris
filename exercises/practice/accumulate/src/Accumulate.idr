@@ -1,5 +1,5 @@
 module Accumulate
 
 export
-accumulate : (Int -> Int) -> List Int -> List Int
+accumulate : (a -> b) -> List a -> List b
 accumulate f xs = ?accumulate_rhs
