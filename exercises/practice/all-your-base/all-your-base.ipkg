@@ -1,0 +1,3 @@
+package all-your-base
+modules = AllYourBase
+sourcedir = "src"

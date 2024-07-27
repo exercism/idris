@@ -1,0 +1,6 @@
+package all-your-base-test
+depends = all-your-base
+  , tester
+main = Main
+executable = "all-your-base-test"
+sourcedir = "src"

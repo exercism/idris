@@ -1,0 +1,10 @@
+[custom.all.all-your-base]
+type = "local"
+path = "."
+ipkg = "all-your-base.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.all-your-base-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
