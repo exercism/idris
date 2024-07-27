@@ -1,0 +1,6 @@
+package secret-handshake-test
+depends = secret-handshake
+  , tester
+main = Main
+executable = "secret-handshake-test"
+sourcedir = "src"
