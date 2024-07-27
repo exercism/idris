@@ -9,7 +9,7 @@ import Data.Vect
 
 tests : List Test
 tests =
-  [ test "Empty RNA sequence"                    (assertEq (toRna []) (the (Vect 0 RnaStrand) []))
+  [ test "Empty RNA sequence"                    (assertEq (toRna []) (the (Vect 0 RnaNucleotide) []))
   , test "RNA complement of cytosine is guanine" (assertEq (toRna [C]) [G])
   , test "RNA complement of guanine is cytosine" (assertEq (toRna [G]) [C])
   , test "RNA complement of thymine is adenine"  (assertEq (toRna [T]) [A])

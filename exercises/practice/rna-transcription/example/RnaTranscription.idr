@@ -4,16 +4,16 @@ import Data.Vect
 
 %default total
 
-namespace DnaStrand
+namespace DnaNucleotide
   public export
-  data DnaStrand = A | C | T | G
+  data DnaNucleotide = A | C | T | G
 
-namespace RnaStrand
+namespace RnaNucleotide
   public export
-  data RnaStrand = A | C | G | U
+  data RnaNucleotide = A | C | G | U
 
 export
-implementation Eq RnaStrand where
+implementation Eq RnaNucleotide where
   (==) A A = True
   (==) C C = True
   (==) G G = True
@@ -21,14 +21,14 @@ implementation Eq RnaStrand where
   (==) _ _ = False
 
 export
-implementation Show RnaStrand where
+implementation Show RnaNucleotide where
   show A = "A"
   show C = "C"
   show G = "G"
   show U = "U"
 
 export
-toRna : Vect n DnaStrand -> Vect n RnaStrand
+toRna : Vect n DnaNucleotide -> Vect n RnaNucleotide
 toRna [] = []
 toRna (A :: xs) = U :: toRna xs
 toRna (C :: xs) = G :: toRna xs
