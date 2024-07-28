@@ -1,0 +1,3 @@
+package armstrong-numbers
+modules = ArmstrongNumbers
+sourcedir = "src"
