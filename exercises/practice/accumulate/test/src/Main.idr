@@ -1,33 +1,25 @@
 module Main
 
+import System
+import Tester
+import Tester.Runner
+
 import Accumulate
+import Data.String
 
-assertEq : Eq a => String -> (given : a) -> (expected : a) -> IO ()
-assertEq label g e = putStrLn $ if g == e then label ++ ": Test Passed" else label ++ ": Test Failed"
+tests : List Test
+tests =
+  [ test "accumulate empty"            (assertEq (accumulate (\x => x * x) []) (the (List Int) []))
+  , test "accumulate squares"          (assertEq (accumulate (\x => x * x) [1, 2, 3]) [1, 4, 9])
+  , test "accumulate upcases"          (assertEq (accumulate Data.String.toUpper ["Hello", "world"]) ["HELLO", "WORLD"])
+  , test "accumulate reversed strings" (assertEq (accumulate (pack . reverse . unpack) ["the", "quick", "brown", "fox", "etc"]) ["eht", "kciuq", "nworb", "xof", "cte"])
+  , test "accumulate recursively"      (assertEq (accumulate (\x => accumulate (\y => x ++ y) ["1", "2", "3"]) ["a", "b", "c"]) [["a1", "a2", "a3"], ["b1", "b2", "b3"], ["c1", "c2", "c3"]])
+  ]
 
-testEmptyListDoesNothing : IO ()
-testEmptyListDoesNothing = assertEq "empty list does nothing" (accumulate (\x => x) []) (the (List Int) [])
-
-testIdentityFunctionDoesNothing : IO ()
-testIdentityFunctionDoesNothing = assertEq "identity function does nothing" (accumulate (\x => x) [1,2,3]) [1,2,3]
-
-testSquareFunctionDoublesInput : IO ()
-testSquareFunctionDoublesInput = assertEq "square function doubles input" (accumulate (\x => x * x) [1,2,3]) [1,4,9]
-
-testCubeFunctionTriplesInput : IO ()
-testCubeFunctionTriplesInput = assertEq "cube function triples input" (accumulate (\x => x * x * x) [1,2,3]) [1,8,27]
-
-testIncrementFunctionAddsOneToAllInput : IO ()
-testIncrementFunctionAddsOneToAllInput = assertEq "increment function adds 1 to input" (accumulate (\x => x + 1) [1,2,3]) [2,3,4]
-
-testDecrementFunctionAddsOneToAllInput : IO ()
-testDecrementFunctionAddsOneToAllInput = assertEq "decrement function subtracts 1 from input" (accumulate (\x => x - 1) [1,2,3]) (the (List Int) [0,1,2])
-
+export
 main : IO ()
 main = do
-  testEmptyListDoesNothing
-  testIdentityFunctionDoesNothing
-  testSquareFunctionDoublesInput
-  testCubeFunctionTriplesInput
-  testIncrementFunctionAddsOneToAllInput
-  testDecrementFunctionAddsOneToAllInput
+  success <- runTests tests
+  if success
+     then putStrLn "All tests passed"
+     else exitFailure

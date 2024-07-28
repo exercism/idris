@@ -1,5 +1,6 @@
 package accumulate-test
 depends = accumulate
+  , tester
 main = Main
 executable = "accumulate-test"
 sourcedir = "src"
