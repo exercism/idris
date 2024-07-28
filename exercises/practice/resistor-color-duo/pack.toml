@@ -1,0 +1,10 @@
+[custom.all.resistor-color-duo]
+type = "local"
+path = "."
+ipkg = "resistor-color-duo.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.resistor-color-duo-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

@@ -233,6 +233,14 @@
         "difficulty": 3
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "ae2f459d-1d8a-4237-a0bd-51d84f431ae1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "c55543cf-9f7a-4f25-986e-f90b0e22ad11",
