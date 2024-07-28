@@ -257,6 +257,14 @@
         "difficulty": 3
       },
       {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "4afe24ca-c886-4bc8-8eea-2b2b2d00077e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "608ec8fa-6a60-44eb-a4e2-79e4a4c984eb",
