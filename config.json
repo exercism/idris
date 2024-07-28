@@ -257,6 +257,14 @@
         "difficulty": 3
       },
       {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "608ec8fa-6a60-44eb-a4e2-79e4a4c984eb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "400942bf-b57d-41f9-84cd-4cdff3528ac3",
