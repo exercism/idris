@@ -1,5 +1,6 @@
 package rna-transcription-test
 depends = rna-transcription
+  , tester
 main = Main
 executable = "rna-transcription-test"
 sourcedir = "src"

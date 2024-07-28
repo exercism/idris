@@ -4,18 +4,22 @@ import Data.Vect
 
 %default total
 
-namespace DnaStrand
+namespace DnaNucleotide
   public export
-  data DnaStrand = Foo
+  data DnaNucleotide = Foo
 
-namespace RnaStrand 
+namespace RnaNucleotide
   public export
-  data RnaStrand = Bar
+  data RnaNucleotide = Bar
 
 export
-implementation Eq RnaStrand where
-  (==) x y = ?RnaStrandEqRhs
+implementation Eq RnaNucleotide where
+  (==) x y = ?RnaNucleotideEqRhs
 
 export
-toRna : Vect n DnaStrand -> Vect n RnaStrand
+implementation Show RnaNucleotide where
+  show x = ?RnaNucleotideShowRhs
+
+export
+toRna : Vect n DnaNucleotide -> Vect n RnaNucleotide
 toRna = ?toRna_rhs
