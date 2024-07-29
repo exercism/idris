@@ -1,0 +1,6 @@
+package robot-simulator-test
+depends = robot-simulator
+  , tester
+main = Main
+executable = "robot-simulator-test"
+sourcedir = "src"

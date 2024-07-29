@@ -1,0 +1,3 @@
+package robot-simulator
+modules = RobotSimulator
+sourcedir = "src"

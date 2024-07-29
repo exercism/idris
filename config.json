@@ -281,6 +281,14 @@
         "difficulty": 4
       },
       {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "5faa4ded-1358-4310-84b6-ad3a8d4f03ea",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "baff4679-ea1b-4a7c-b958-cdac93e5656c",

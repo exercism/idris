@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "src/RobotSimulator.idr"
+    ],
+    "test": [
+      "test/src/Main.idr"
+    ],
+    "example": [
+      "example/RobotSimulator.idr"
+    ]
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}
