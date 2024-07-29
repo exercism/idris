@@ -289,6 +289,14 @@
         "difficulty": 5
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "5c9dc29b-f8c4-48c1-83a6-cb2b9b4e4c07",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "zebra-puzzle",
         "name": "Zebra Puzzle",
         "uuid": "1ff7b0c6-2747-4604-b942-3f7e683f45a1",

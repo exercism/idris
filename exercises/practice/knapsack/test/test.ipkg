@@ -1,0 +1,6 @@
+package knapsack-test
+depends = knapsack
+  , tester
+main = Main
+executable = "knapsack-test"
+sourcedir = "src"
