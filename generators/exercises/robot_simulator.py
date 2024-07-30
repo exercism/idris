@@ -30,13 +30,23 @@ def header():
 
 def generate_test(case):
     def to_robot(data):
+      direction = data["direction"].title()
       x = data["position"]["x"]
       y = data["position"]["y"]
-      direction = data["direction"].title()
       return f'(MkRobot {direction} [{x}, {y}])'
 
     property = case["property"]
     expected = to_robot(case["expected"])
+    if property == 'create':
+      direction = case["input"]["direction"].title()
+      x = case["input"]["position"]["x"]
+      if x < 0:
+        x = f'({x})'
+      y = case["input"]["position"]["y"]
+      if y < 0:
+        y = f'({y})'
+      return f'assertEq (create {direction} {x} {y}) {expected}'
+
     robot = to_robot(case["input"])
     instructions = case["input"]["instructions"]
     instructions = str(list(instructions)).replace("'", "")

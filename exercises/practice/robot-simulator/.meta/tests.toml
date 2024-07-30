@@ -11,11 +11,9 @@
 
 [c557c16d-26c1-4e06-827c-f6602cd0785c]
 description = "Create robot -> at origin facing north"
-include = false
 
 [bf0dffce-f11c-4cdb-8a5e-2c89d8a5a67d]
 description = "Create robot -> at negative position facing south"
-include = false
 
 [8cbd0086-6392-4680-b9b9-73cf491e67e5]
 description = "Rotating clockwise -> changes north to east"

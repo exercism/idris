@@ -15,6 +15,10 @@ record Robot where
   coordinates : Vect 2 Integer
 
 public export
+create : Direction -> Integer -> Integer -> Robot
+create direction x y = MkRobot direction [x, y]
+
+public export
 move : Robot -> List Instruction -> Robot
 move = foldl movement
   where movement : Robot -> Instruction -> Robot

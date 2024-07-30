@@ -32,7 +32,9 @@ implementation Show Robot where
 
 tests : List Test
 tests =
-  [ test "changes north to east"             (assertEq (move (MkRobot North [0, 0]) [R]) (MkRobot East [0, 0]))
+  [ test "at origin facing north"            (assertEq (create North 0 0) (MkRobot North [0, 0]))
+  , test "at negative position facing south" (assertEq (create South (-1) (-1)) (MkRobot South [-1, -1]))
+  , test "changes north to east"             (assertEq (move (MkRobot North [0, 0]) [R]) (MkRobot East [0, 0]))
   , test "changes east to south"             (assertEq (move (MkRobot East [0, 0]) [R]) (MkRobot South [0, 0]))
   , test "changes south to west"             (assertEq (move (MkRobot South [0, 0]) [R]) (MkRobot West [0, 0]))
   , test "changes west to north"             (assertEq (move (MkRobot West [0, 0]) [R]) (MkRobot North [0, 0]))

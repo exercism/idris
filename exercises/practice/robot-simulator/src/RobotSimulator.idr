@@ -15,5 +15,9 @@ record Robot where
   coordinates : Vect 2 Integer
 
 public export
+create : Direction -> Integer -> Integer -> Robot
+create direction x y = ?create_rhs
+
+public export
 move : Robot -> List Instruction -> Robot
 move robot instructions = ?move_rhs
