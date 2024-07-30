@@ -1,0 +1,6 @@
+package resistor-color-trio-test
+depends = resistor-color-trio
+  , tester
+main = Main
+executable = "resistor-color-trio-test"
+sourcedir = "src"
