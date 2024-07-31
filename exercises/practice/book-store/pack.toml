@@ -1,0 +1,10 @@
+[custom.all.book-store]
+type = "local"
+path = "."
+ipkg = "book-store.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.book-store-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
