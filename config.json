@@ -225,6 +225,14 @@
         "difficulty": 2
       },
       {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "963cd26f-59ef-4651-86a2-bb1018d32523",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "9a9c1af3-2c53-4800-98d8-5eae375a8239",
