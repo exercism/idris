@@ -1,0 +1,10 @@
+[custom.all.robot-simulator]
+type = "local"
+path = "."
+ipkg = "robot-simulator.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.robot-simulator-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
