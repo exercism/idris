@@ -1,0 +1,10 @@
+[custom.all.flatten-array]
+type = "local"
+path = "."
+ipkg = "flatten-array.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.flatten-array-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

@@ -1,0 +1,6 @@
+package flatten-array-test
+depends = flatten-array
+  , tester
+main = Main
+executable = "flatten-array-test"
+sourcedir = "src"
