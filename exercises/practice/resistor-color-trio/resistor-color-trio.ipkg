@@ -1,0 +1,3 @@
+package resistor-color-trio
+modules = ResistorColorTrio
+sourcedir = "src"
