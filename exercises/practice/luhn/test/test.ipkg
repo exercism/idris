@@ -1,0 +1,6 @@
+package luhn-test
+depends = luhn
+  , tester
+main = Main
+executable = "luhn-test"
+sourcedir = "src"
