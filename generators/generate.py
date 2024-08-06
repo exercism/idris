@@ -26,10 +26,13 @@ main = do
 """
 
 def read_canonical_data(exercise):
+    prefix = "Using cached 'problem-specifications' dir: "
     args = ['bin/configlet', 'info', '-o', '-v', 'd']
-    info = subprocess.run(args, capture_output=True, check=True, text=True).stdout
-    cache_dir = info.split("\n")[0].replace("Using cached 'problem-specifications' dir: ", "")
-    path = f"{cache_dir}/exercises/{exercise}/canonical-data.json"
+    info = subprocess.run(args, capture_output=True, check=True, text=True).stdout.split("\n")
+    cache_dir = [line[len(prefix):] for line in info if line.startswith(prefix)]
+    if len(cache_dir) != 1:
+        raise Exception("Could not determine 'problem-specifications' dir")
+    path = f"{cache_dir[0]}/exercises/{exercise}/canonical-data.json"
     with open(path, "r") as f:
         return json.loads(f.read())
 
