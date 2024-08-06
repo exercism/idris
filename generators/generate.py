@@ -3,9 +3,9 @@
 import argparse
 import importlib
 import json
+import subprocess
 import sys
 import tomllib
-import urllib.request
 
 PREFIX = """module Main
 
@@ -25,10 +25,16 @@ main = do
      else exitFailure
 """
 
-def download_canonical_data(exercise):
-    url = f"https://raw.githubusercontent.com/exercism/problem-specifications/master/exercises/{exercise}/canonical-data.json"
-    with urllib.request.urlopen(url) as f:
-        return json.loads(f.read().decode())
+def read_canonical_data(exercise):
+    prefix = "Using cached 'problem-specifications' dir: "
+    args = ['bin/configlet', 'info', '-o', '-v', 'd']
+    info = subprocess.run(args, capture_output=True, check=True, text=True).stdout.split("\n")
+    cache_dir = [line[len(prefix):] for line in info if line.startswith(prefix)]
+    if len(cache_dir) != 1:
+        raise Exception("Could not determine 'problem-specifications' dir")
+    path = f"{cache_dir[0]}/exercises/{exercise}/canonical-data.json"
+    with open(path, "r") as f:
+        return json.loads(f.read())
 
 def flatten_cases(canonical_data):
     result = []
@@ -77,7 +83,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("exercise")
     args = parser.parse_args()
-    cases = flatten_cases(download_canonical_data(args.exercise))
+    cases = flatten_cases(read_canonical_data(args.exercise))
     cases = filter_cases(args.exercise, cases)
 
     mod = importlib.import_module("exercises." + args.exercise.replace("-", "_"))
