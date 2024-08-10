@@ -1,7 +1,7 @@
 module ZebraPuzzle
 
 public export
-data Nationality = Englishman | Japanese | Norwegian | Spaniard | Ukranian
+data Nationality = Englishman | Japanese | Norwegian | Spaniard | Ukrainian
 
 public export
 record Solution where
