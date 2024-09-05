@@ -1,0 +1,3 @@
+package isbn-verifier
+modules = IsbnVerifier
+sourcedir = "src"
