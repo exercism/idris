@@ -12,7 +12,7 @@ implementation Eq Nationality where
   (==) Japanese Japanese = True
   (==) Norwegian Norwegian = True
   (==) Spaniard Spaniard = True
-  (==) Ukranian Ukranian = True
+  (==) Ukrainian Ukrainian = True
   (==) _ _ = False
 
 public export
@@ -21,7 +21,7 @@ implementation Show Nationality where
   show Japanese = "Japanese"
   show Norwegian = "Norwegian"
   show Spaniard = "Spaniard"
-  show Ukranian = "Ukranian"
+  show Ukrainian = "Ukrainian"
 
 tests : List Test
 tests =
