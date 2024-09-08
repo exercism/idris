@@ -10,5 +10,7 @@ def generate_test(case):
         return f"Leaf {data}"
     property = case["property"]
     expected = case["expected"]
+    if expected == []:
+        expected = "(the (List Int) [])"
     tree = to_tree(case["input"]["array"])
     return f'assertEq ({property} $ {tree}) {expected}'
