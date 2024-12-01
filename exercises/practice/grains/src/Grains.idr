@@ -6,4 +6,4 @@ grains square = ?grains_rhs
 
 export
 totalGrains : Integer
-total = ?total_rhs
+totalGrains = ?totalGrains_rhs
