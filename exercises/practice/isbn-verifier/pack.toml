@@ -1,0 +1,10 @@
+[custom.all.isbn-verifier]
+type = "local"
+path = "."
+ipkg = "isbn-verifier.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.isbn-verifier-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

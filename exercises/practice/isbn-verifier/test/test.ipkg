@@ -1,0 +1,6 @@
+package isbn-verifier-test
+depends = isbn-verifier
+  , tester
+main = Main
+executable = "isbn-verifier-test"
+sourcedir = "src"
