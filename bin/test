@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Test the idris track's exercises.
+#
+# For each exercise we type-check the template solution (which is
+# provided to the students) and test if the example solution
+# example/*.idr passes the tests.
+#
+# Usage:
+# ./bin/test [slug...]
+
+all_slugs="$*"
+if [ -z "$all_slugs" ]; then
+  all_slugs=$(ls ./exercises/practice/)
+fi
+
+docker run --rm --entrypoint bash \
+       --network none \
+       --mount type=bind,src=$(realpath ./exercises),dst=/exercises,ro \
+       --mount type=bind,src=$(realpath ./scripts),dst=/scripts,ro \
+       exercism/idris-test-runner \
+       /scripts/test-in-docker.sh $all_slugs
+
+exit_code=$?
+
+exit ${exit_code}
