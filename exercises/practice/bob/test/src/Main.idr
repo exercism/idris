@@ -28,11 +28,11 @@ tests =
   , test "silence"                             (assertEq (response "") "Fine. Be that way!")
   , test "prolonged silence"                   (assertEq (response "          ") "Fine. Be that way!")
   , test "alternate silence"                   (assertEq (response "\t\t\t\t\t\t\t\t\t\t") "Fine. Be that way!")
-  , test "multiple line question"              (assertEq (response "\nDoes this cryogenic chamber make me look fat?\nNo.") "Whatever.")
   , test "starting with whitespace"            (assertEq (response "         hmmmmmmm...") "Whatever.")
   , test "ending with whitespace"              (assertEq (response "Okay if like my  spacebar  quite a bit?   ") "Sure.")
   , test "other whitespace"                    (assertEq (response "\n\r \t") "Fine. Be that way!")
   , test "non-question ending with whitespace" (assertEq (response "This is a statement ending with whitespace      ") "Whatever.")
+  , test "multiple line question"              (assertEq (response "\nDoes this cryogenic chamber make\n me look fat?") "Sure.")
   ]
 
 export
