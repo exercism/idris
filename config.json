@@ -225,6 +225,14 @@
         "difficulty": 2
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "b8631f1c-0023-4746-bdc1-b54e75fc9530",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "963cd26f-59ef-4651-86a2-bb1018d32523",
