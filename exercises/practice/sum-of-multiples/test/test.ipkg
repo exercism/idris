@@ -1,0 +1,6 @@
+package sum-of-multiples-test
+depends = sum-of-multiples
+  , tester
+main = Main
+executable = "sum-of-multiples-test"
+sourcedir = "src"
