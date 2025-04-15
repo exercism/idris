@@ -1,0 +1,6 @@
+package triangle-test
+depends = triangle
+  , tester
+main = Main
+executable = "triangle-test"
+sourcedir = "src"

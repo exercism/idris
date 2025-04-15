@@ -1,0 +1,10 @@
+[custom.all.triangle]
+type = "local"
+path = "."
+ipkg = "triangle.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.triangle-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
