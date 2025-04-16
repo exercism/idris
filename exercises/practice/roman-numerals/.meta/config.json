@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "src/RomanNumerals.idr"
+    ],
+    "test": [
+      "test/src/Main.idr"
+    ],
+    "example": [
+      "example/RomanNumerals.idr"
+    ]
+  },
+  "blurb": "Convert modern Arabic numbers into Roman numerals.",
+  "source": "The Roman Numeral Kata",
+  "source_url": "https://codingdojo.org/kata/RomanNumerals/"
+}

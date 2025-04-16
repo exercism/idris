@@ -1,0 +1,6 @@
+package roman-numerals-test
+depends = roman-numerals
+  , tester
+main = Main
+executable = "roman-numerals-test"
+sourcedir = "src"
