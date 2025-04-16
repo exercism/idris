@@ -1,0 +1,3 @@
+package roman-numerals
+modules = RomanNumerals
+sourcedir = "src"

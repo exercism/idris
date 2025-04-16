@@ -1,0 +1,10 @@
+[custom.all.roman-numerals]
+type = "local"
+path = "."
+ipkg = "roman-numerals.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.roman-numerals-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
