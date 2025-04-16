@@ -1,0 +1,3 @@
+package sum-of-multiples
+modules = SumOfMultiples
+sourcedir = "src"

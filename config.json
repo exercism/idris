@@ -225,6 +225,22 @@
         "difficulty": 2
       },
       {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "fe6d6ed4-ff18-4c59-9017-7e0ae8e3048e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "c80a5798-0138-43ed-a7fe-7d8cbd6da105",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "963cd26f-59ef-4651-86a2-bb1018d32523",
@@ -343,14 +359,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
-      },
-      {
-        "slug": "triangle",
-        "name": "Triangle",
-        "uuid": "c80a5798-0138-43ed-a7fe-7d8cbd6da105",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
       }
     ]
   },
