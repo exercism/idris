@@ -1,0 +1,10 @@
+[custom.all.perfect-numbers]
+type = "local"
+path = "."
+ipkg = "perfect-numbers.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.perfect-numbers-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

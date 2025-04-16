@@ -1,0 +1,6 @@
+package perfect-numbers-test
+depends = perfect-numbers
+  , tester
+main = Main
+executable = "perfect-numbers-test"
+sourcedir = "src"

@@ -1,0 +1,3 @@
+package perfect-numbers
+modules = PerfectNumbers
+sourcedir = "src"
