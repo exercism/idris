@@ -233,6 +233,14 @@
         "difficulty": 3
       },
       {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "c69130a2-4681-413e-9671-c931424c7fd6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "9a9c1af3-2c53-4800-98d8-5eae375a8239",
