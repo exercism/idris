@@ -1,0 +1,10 @@
+[custom.all.phone-number]
+type = "local"
+path = "."
+ipkg = "phone-number.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.phone-number-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

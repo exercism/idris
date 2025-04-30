@@ -1,0 +1,6 @@
+package phone-number-test
+depends = phone-number
+  , tester
+main = Main
+executable = "phone-number-test"
+sourcedir = "src"
