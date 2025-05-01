@@ -1,0 +1,3 @@
+package list-ops
+modules = ListOps
+sourcedir = "src"

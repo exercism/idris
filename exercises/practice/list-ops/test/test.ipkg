@@ -1,0 +1,6 @@
+package list-ops-test
+depends = list-ops
+  , tester
+main = Main
+executable = "list-ops-test"
+sourcedir = "src"
