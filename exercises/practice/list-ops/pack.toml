@@ -1,0 +1,10 @@
+[custom.all.list-ops]
+type = "local"
+path = "."
+ipkg = "list-ops.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.list-ops-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
