@@ -1,0 +1,6 @@
+package book-store-test
+depends = book-store
+  , tester
+main = Main
+executable = "book-store-test"
+sourcedir = "src"
