@@ -1,0 +1,6 @@
+package kindergarten-garden-test
+depends = kindergarten-garden
+  , tester
+main = Main
+executable = "kindergarten-garden-test"
+sourcedir = "src"
