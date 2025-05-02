@@ -1,0 +1,3 @@
+package atbash-cipher
+modules = AtbashCipher
+sourcedir = "src"
