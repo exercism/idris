@@ -1,0 +1,6 @@
+package atbash-cipher-test
+depends = atbash-cipher
+  , tester
+main = Main
+executable = "atbash-cipher-test"
+sourcedir = "src"

@@ -321,6 +321,14 @@
         "difficulty": 4
       },
       {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "6e07b253-e13f-4441-8d59-4a6ec9f1f8bf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "870aebd5-88f0-40ab-aeac-12dbd8e3f9e2",
