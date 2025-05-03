@@ -1,0 +1,6 @@
+package meetup-test
+depends = meetup
+  , tester
+main = Main
+executable = "meetup-test"
+sourcedir = "src"
