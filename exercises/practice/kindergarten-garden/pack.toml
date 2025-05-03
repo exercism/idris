@@ -1,0 +1,10 @@
+[custom.all.kindergarten-garden]
+type = "local"
+path = "."
+ipkg = "kindergarten-garden.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.kindergarten-garden-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

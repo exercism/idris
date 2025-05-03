@@ -1,0 +1,3 @@
+package kindergarten-garden
+modules = KindergartenGarden
+sourcedir = "src"

@@ -337,6 +337,14 @@
         "difficulty": 4
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "036edc4c-a540-4516-832a-68f0618ace22",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "3f9db1c3-240a-43fb-837e-fe57f318bcc4",
