@@ -34,6 +34,9 @@ read -p "What's the difficulty for ${slug}? " difficulty
 bin/fetch-configlet
 bin/configlet create --practice-exercise "${slug}" --author "${author}" --difficulty "${difficulty}"
 
+filter='.exercises.practice = (.exercises.practice |sort_by(.difficulty, .slug))'
+jq "${filter}" config.json > config.sorted && mv config.sorted config.json
+
 sed -e "s#hello-world#${slug}#g" exercises/practice/hello-world/pack.toml > exercises/practice/${slug}/pack.toml
 
 sed -e "s#hello-world#${slug}#g" exercises/practice/hello-world/test/test.ipkg > exercises/practice/${slug}/test/test.ipkg
