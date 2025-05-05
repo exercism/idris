@@ -1,0 +1,10 @@
+[custom.all.meetup]
+type = "local"
+path = "."
+ipkg = "meetup.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.meetup-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
