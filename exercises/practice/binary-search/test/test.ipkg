@@ -1,0 +1,6 @@
+package binary-search-test
+depends = binary-search
+  , tester
+main = Main
+executable = "binary-search-test"
+sourcedir = "src"

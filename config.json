@@ -329,6 +329,14 @@
         "difficulty": 4
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "f37a6ad4-7006-430c-a4a5-5b14649d572c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "870aebd5-88f0-40ab-aeac-12dbd8e3f9e2",
