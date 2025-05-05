@@ -1,0 +1,10 @@
+[custom.all.run-length-encoding]
+type = "local"
+path = "."
+ipkg = "run-length-encoding.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.run-length-encoding-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
