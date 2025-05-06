@@ -1,0 +1,6 @@
+package satellite-test
+depends = satellite
+  , tester
+main = Main
+executable = "satellite-test"
+sourcedir = "src"

@@ -1,0 +1,3 @@
+package satellite
+modules = Satellite
+sourcedir = "src"
