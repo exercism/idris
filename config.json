@@ -353,6 +353,14 @@
         "difficulty": 4
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "dcf0d91e-fce1-48db-9c46-d111d596c1f3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "3f9db1c3-240a-43fb-837e-fe57f318bcc4",

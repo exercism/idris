@@ -1,0 +1,6 @@
+package largest-series-product-test
+depends = largest-series-product
+  , tester
+main = Main
+executable = "largest-series-product-test"
+sourcedir = "src"
