@@ -393,6 +393,14 @@
         "difficulty": 4
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "296c4afe-5e50-486a-8f14-b77a88afa13d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "baff4679-ea1b-4a7c-b958-cdac93e5656c",

@@ -1,0 +1,6 @@
+package run-length-encoding-test
+depends = run-length-encoding
+  , tester
+main = Main
+executable = "run-length-encoding-test"
+sourcedir = "src"
