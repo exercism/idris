@@ -249,6 +249,14 @@
         "difficulty": 3
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "07f9b94a-e451-4c25-a12e-e5cd0afa748c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "perfect-numbers",
         "name": "Perfect Numbers",
         "uuid": "c69130a2-4681-413e-9671-c931424c7fd6",
