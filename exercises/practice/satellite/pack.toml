@@ -1,0 +1,10 @@
+[custom.all.satellite]
+type = "local"
+path = "."
+ipkg = "satellite.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.satellite-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
