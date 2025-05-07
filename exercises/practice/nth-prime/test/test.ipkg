@@ -1,0 +1,6 @@
+package nth-prime-test
+depends = nth-prime
+  , tester
+main = Main
+executable = "nth-prime-test"
+sourcedir = "src"
