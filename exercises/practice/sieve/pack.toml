@@ -1,0 +1,10 @@
+[custom.all.sieve]
+type = "local"
+path = "."
+ipkg = "sieve.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.sieve-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
