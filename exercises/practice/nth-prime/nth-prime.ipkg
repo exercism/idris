@@ -1,0 +1,3 @@
+package nth-prime
+modules = NthPrime
+sourcedir = "src"

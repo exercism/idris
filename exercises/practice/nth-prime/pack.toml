@@ -1,0 +1,10 @@
+[custom.all.nth-prime]
+type = "local"
+path = "."
+ipkg = "nth-prime.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.nth-prime-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"

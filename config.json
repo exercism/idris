@@ -409,6 +409,14 @@
         "difficulty": 4
       },
       {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "e8e07b91-bf34-4147-8ca6-8952a9bf62d0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "baff4679-ea1b-4a7c-b958-cdac93e5656c",
