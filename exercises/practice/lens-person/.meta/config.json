@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "src/LensPerson.idr"
+    ],
+    "test": [
+      "test/src/Main.idr"
+    ],
+    "example": [
+      "example/LensPerson.idr"
+    ]
+  },
+  "blurb": "Use lenses to update nested records (specific to languages with immutable data)."
+}

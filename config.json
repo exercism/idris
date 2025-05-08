@@ -465,6 +465,14 @@
         "difficulty": 7
       },
       {
+        "slug": "lens-person",
+        "name": "Lens Person",
+        "uuid": "5978e540-eb0b-4d82-96a2-df0c215a0330",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "satellite",
         "name": "Satellite",
         "uuid": "e0f40b14-7dc7-4368-b110-2fbc52b8e8fc",

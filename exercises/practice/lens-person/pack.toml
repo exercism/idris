@@ -1,0 +1,10 @@
+[custom.all.lens-person]
+type = "local"
+path = "."
+ipkg = "lens-person.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.lens-person-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
