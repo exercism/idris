@@ -1,0 +1,6 @@
+package sieve-test
+depends = sieve
+  , tester
+main = Main
+executable = "sieve-test"
+sourcedir = "src"

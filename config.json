@@ -409,6 +409,14 @@
         "difficulty": 4
       },
       {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "39b07b62-d29a-4f85-b8c1-b52f8fffd0b8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "e8e07b91-bf34-4147-8ca6-8952a9bf62d0",
