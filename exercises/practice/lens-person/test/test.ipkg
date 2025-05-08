@@ -1,0 +1,6 @@
+package lens-person-test
+depends = lens-person
+  , tester
+main = Main
+executable = "lens-person-test"
+sourcedir = "src"

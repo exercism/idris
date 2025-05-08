@@ -3,6 +3,7 @@
 import argparse
 import importlib
 import json
+import os
 import subprocess
 import sys
 import tomllib
@@ -32,9 +33,12 @@ def read_canonical_data(exercise):
     cache_dir = [line[len(prefix):] for line in info if line.startswith(prefix)]
     if len(cache_dir) != 1:
         raise Exception("Could not determine 'problem-specifications' dir")
-    path = f"{cache_dir[0]}/exercises/{exercise}/canonical-data.json"
-    with open(path, "r") as f:
-        return json.loads(f.read())
+    json_path = f"{cache_dir[0]}/exercises/{exercise}/canonical-data.json"
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            return json.loads(f.read())
+    else:
+        return { "cases": [] }
 
 def flatten_cases(canonical_data):
     result = []
@@ -49,12 +53,15 @@ def flatten_cases(canonical_data):
     return result
 
 def filter_cases(exercise, cases):
-    test_toml = f"{sys.path[0]}/../exercises/practice/{exercise}/.meta/tests.toml"
-    with open(test_toml, "rb") as f:
+    toml_path = f"{sys.path[0]}/../exercises/practice/{exercise}/.meta/tests.toml"
+    with open(toml_path, "rb") as f:
         test_toml = tomllib.load(f)
     return list(filter(lambda case : test_toml.get(case['uuid'], {}).get("include", True), cases))
 
 def write_test_file(f, mod, exercise, cases):
+    if hasattr(mod, "extra_cases"):
+        cases = cases[:]
+        cases.extend(mod.extra_cases())
     exercise_module = exercise.title().replace("-", "")
     max_description_length = max(map(lambda case: len(case["description"]), cases))
 
@@ -63,9 +70,6 @@ def write_test_file(f, mod, exercise, cases):
     if hasattr(mod, "header"):
         f.write(mod.header())
     f.write(f"\n")
-    if hasattr(mod, "extra_cases"):
-        cases = cases[:]
-        cases.extend(mod.extra_cases())
     f.write(f"tests : List Test\n")
     f.write(f"tests =\n")
     separator = '['
@@ -84,7 +88,8 @@ def main():
     parser.add_argument("exercise")
     args = parser.parse_args()
     cases = flatten_cases(read_canonical_data(args.exercise))
-    cases = filter_cases(args.exercise, cases)
+    if len(cases) > 0:
+        cases = filter_cases(args.exercise, cases)
 
     mod = importlib.import_module("exercises." + args.exercise.replace("-", "_"))
     path = f"{sys.path[0]}/../exercises/practice/{args.exercise}/test/src/Main.idr"

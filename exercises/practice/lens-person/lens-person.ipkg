@@ -1,0 +1,3 @@
+package lens-person
+modules = LensPerson
+sourcedir = "src"
