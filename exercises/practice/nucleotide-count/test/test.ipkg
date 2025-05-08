@@ -1,0 +1,6 @@
+package nucleotide-count-test
+depends = nucleotide-count
+  , tester
+main = Main
+executable = "nucleotide-count-test"
+sourcedir = "src"

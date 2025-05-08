@@ -1,0 +1,10 @@
+[custom.all.nucleotide-count]
+type = "local"
+path = "."
+ipkg = "nucleotide-count.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.nucleotide-count-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
