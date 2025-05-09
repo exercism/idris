@@ -1,27 +1,29 @@
 
+JANE = {
+    "name": "Jane Joanna Doe",
+    "born": {
+        "bornAt": {
+            "street": "Longway",
+            "houseNumber": 1024,
+            "place": "Springfield",
+            "country": "United States"
+        },
+        "bornOn": "1984-04-12"
+    },
+    "address": {
+        "street": "Shortlane",
+        "houseNumber": 2,
+        "place": "Fallmeadow",
+        "country": "Canada"
+    }
+}
+
 EXTRA_CASES = [
     {
         "description": "bornStreet should be Longway",
         "property": "bornStreet . born",
         "input": {
-            "person": {
-                "name": "Jane Joanna Doe",
-                "born": {
-                    "bornAt": {
-                        "street": "Longway",
-                        "houseNumber": 1024,
-                        "place": "Springfield",
-                        "country": "United States"
-                    },
-                    "bornOn": "1984-04-12"
-                },
-                "address": {
-                    "street": "Shortlane",
-                    "houseNumber": 2,
-                    "place": "Fallmeadow",
-                    "country": "Canada"
-                }
-            }
+            "person": "jane"
         },
         "expected": "Longway"
     },
@@ -30,24 +32,7 @@ EXTRA_CASES = [
         "property": "street . address . setCurrentStreet",
         "input": {
             "street": "Middleroad",
-            "person": {
-                "name": "Jane Joanna Doe",
-                "born": {
-                    "bornAt": {
-                        "street": "Longway",
-                        "houseNumber": 1024,
-                        "place": "Springfield",
-                        "country": "United States"
-                    },
-                    "bornOn": "1984-04-12"
-                },
-                "address": {
-                    "street": "Shortlane",
-                    "houseNumber": 2,
-                    "place": "Fallmeadow",
-                    "country": "Canada"
-                }
-            }
+            "person": "jane"
         },
         "expected": "Middleroad"
     },
@@ -55,24 +40,7 @@ EXTRA_CASES = [
         "description": "birth street should be renamed to LONGWAY",
         "property": "street . bornAt . born . renameStreets toUpper",
         "input": {
-            "person": {
-                "name": "Jane Joanna Doe",
-                "born": {
-                    "bornAt": {
-                        "street": "Longway",
-                        "houseNumber": 1024,
-                        "place": "Springfield",
-                        "country": "United States"
-                    },
-                    "bornOn": "1984-04-12"
-                },
-                "address": {
-                    "street": "Shortlane",
-                    "houseNumber": 2,
-                    "place": "Fallmeadow",
-                    "country": "Canada"
-                }
-            }
+            "person": "jane"
         },
         "expected": "LONGWAY"
     },
@@ -80,31 +48,15 @@ EXTRA_CASES = [
         "description": "current street should be renamed to SHORTLANE",
         "property": "street . address . renameStreets toUpper",
         "input": {
-            "person": {
-                "name": "Jane Joanna Doe",
-                "born": {
-                    "bornAt": {
-                        "street": "Longway",
-                        "houseNumber": 1024,
-                        "place": "Springfield",
-                        "country": "United States"
-                    },
-                    "bornOn": "1984-04-12"
-                },
-                "address": {
-                    "street": "Shortlane",
-                    "houseNumber": 2,
-                    "place": "Fallmeadow",
-                    "country": "Canada"
-                }
-            }
+            "person": "jane"
         },
         "expected": "SHORTLANE"
     }
 ]
 
 def header():
-    return "import Data.String\n"
+    jane = serialize_person(JANE)
+    return f"import Data.String\n\njane = {jane}\n"
 
 def extra_cases():
     return EXTRA_CASES
@@ -133,5 +85,5 @@ def generate_test(case):
         street = case["input"]["street"]
         property = f'{property} "{street}"'
     expected = case["expected"]
-    person = serialize_person(case["input"]["person"])
+    person = case["input"]["person"]
     return f'assertEq (({property}) {person}) "{expected}"'
