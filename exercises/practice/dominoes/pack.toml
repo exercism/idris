@@ -1,0 +1,10 @@
+[custom.all.dominoes]
+type = "local"
+path = "."
+ipkg = "dominoes.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.dominoes-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
