@@ -1,0 +1,3 @@
+package dominoes
+modules = Dominoes
+sourcedir = "src"

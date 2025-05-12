@@ -17,10 +17,10 @@ fi
 
 docker run --rm --entrypoint bash \
        --network none \
-       --mount type=bind,src=$(realpath ./exercises),dst=/exercises,ro \
-       --mount type=bind,src=$(realpath ./scripts),dst=/scripts,ro \
+       --mount type=bind,src="$(realpath ./exercises)",dst=/exercises,ro \
+       --mount type=bind,src="$(realpath ./scripts)",dst=/scripts,ro \
        exercism/idris-test-runner \
-       /scripts/test-in-docker.sh $all_slugs
+       /scripts/test-in-docker.sh "$all_slugs"
 
 exit_code=$?
 

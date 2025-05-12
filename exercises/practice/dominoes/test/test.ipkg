@@ -1,0 +1,6 @@
+package dominoes-test
+depends = dominoes
+  , tester
+main = Main
+executable = "dominoes-test"
+sourcedir = "src"

@@ -465,6 +465,14 @@
         "difficulty": 7
       },
       {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "a3fb23c8-6aff-4565-b7fe-21122051e82f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "lens-person",
         "name": "Lens Person",
         "uuid": "5978e540-eb0b-4d82-96a2-df0c215a0330",
