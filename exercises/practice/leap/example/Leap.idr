@@ -1,6 +1,6 @@
 module Leap
 
-export 
+export
 isLeap : Int -> Bool
 isLeap year =
   (divBy 4 && not (divBy 100)) || divBy 400

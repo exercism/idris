@@ -1,0 +1,6 @@
+package game-of-life-test
+depends = game-of-life
+  , tester
+main = Main
+executable = "game-of-life-test"
+sourcedir = "src"

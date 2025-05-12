@@ -13,4 +13,3 @@ isIsosceles sides = ?isIsosceles_rhs
 export
 isScalene : Vect 3 Integer -> Bool
 isScalene sides = ?isScalene_rhs
-
