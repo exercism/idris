@@ -14,7 +14,7 @@ startsWith _ _ = False
 traverse : Maybe Char -> List Char -> List Char -> Maybe Triple
 traverse successor preorder inorder = if startsWith successor inorder then Just $ MkTriple Leaf preorder inorder
                                       else step1 preorder
-  where 
+  where
         step3 : Tree -> Char -> Maybe Triple -> Maybe Triple
         step3 l v Nothing = Nothing
         step3 l v (Just (MkTriple r preorder3 inorder3)) = Just $ MkTriple (Branch l v r) preorder3 inorder3

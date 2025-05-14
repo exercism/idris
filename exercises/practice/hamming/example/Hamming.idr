@@ -15,5 +15,5 @@ implementation Eq Nucleotide where
 
 export
 hamming_distance : Eq a => Vect n a -> Vect n a -> Nat
-hamming_distance s1 s2 = 
+hamming_distance s1 s2 =
   fst $ filter (\(n1,n2) => n1 /= n2) $ zip s1 s2

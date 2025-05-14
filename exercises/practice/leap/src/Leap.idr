@@ -1,5 +1,5 @@
 module Leap
 
-export 
+export
 isLeap : Int -> Bool
 isLeap year = ?isLeap_rhs

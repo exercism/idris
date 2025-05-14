@@ -1,0 +1,3 @@
+package game-of-life
+modules = GameOfLife
+sourcedir = "src"

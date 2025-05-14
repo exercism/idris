@@ -473,6 +473,14 @@
         "difficulty": 8
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "addc338c-0403-4a86-a989-37fb97b4eb8b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "lens-person",
         "name": "Lens Person",
         "uuid": "5978e540-eb0b-4d82-96a2-df0c215a0330",
