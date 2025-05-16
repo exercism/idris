@@ -1,39 +1,51 @@
 # Installation
 
-## Prerequisites
+The Idris track uses [Pack][], an Idris2 Package Manager.
 
-Before installing Idris, you will need to make sure you have all of the necessary libraries and tools. You will need:
-
-- A fairly recent Haskell platform. Version 2013.2.0.0 should be sufficiently recent, though it is better to be completely up to date.
-- The GNU Multiple Precision Arithmetic Library (GMP) is available from MacPorts/Homebrew and all major Linux distributions.
-
-## Idris
-
-The easiest way to install Idris, if you have all of the prerequisites, is to type:
+### Preparation - Ubuntu 24.04 or later
 
 ```shell
-cabal update; cabal install idris
+sudo apt update
+sudo apt install chezscheme gcc git libgmp-dev make
 ```
 
-This will install the latest version released on Hackage, along with any dependencies.
-If, however, you would like the most up to date development version you can find it,
-as well as build instructions, on GitHub at: https://github.com/idris-lang/Idris-dev.
+### Preparation - Other distributions
 
-## Necessary libraries
+Make sure you have a recent git, version 2.35.1 or later.
 
-You also need to install some Idris libraries, which are requirements of our testsuite.
+Configure Chez Scheme with support for threads.
 
-### `idris-testing`
-
-This library provides the actual testing framework we use. It's installation is pretty simple.
 
 ```shell
-pushd /tmp
-git clone git@github.com:jfdm/idris-testing.git
-cd idris-testing
-make lib
-make install # depending on your installation of idris this might need to be run as root
-popd
+git version
+sudo apt update
+sudo apt install gcc libgmp-dev libncurses5-dev libx11-dev make
+
+git clone https://github.com/cisco/ChezScheme.git
+cd ChezScheme
+./configure --threads
+make
+sudo make install
+which scheme
 ```
 
-If the tests will ever brake because of calling things that your installed version of `idris-testing` does not provide, you have to update it by repeating the steps above.
+### Pack
+
+```
+git clone https://github.com/stefan-hoeck/idris2-pack.git pack
+bash -c pack/install.bash
+export PATH="$HOME/.pack/bin:$HOME/.idris2/bin:$PATH"
+pack info
+```
+
+### Troubleshooting
+
+See Pack's detailed [installation instructions][].
+
+### Docker Images
+
+Stefan Höck provides Ubuntu-based [Docker images][] with Pack installed.
+
+[Pack]: https://github.com/stefan-hoeck/idris2-pack
+[installation instructions]: https://github.com/stefan-hoeck/idris2-pack/blob/main/INSTALL.md
+[Docker images]: https://github.com/stefan-hoeck/idris2-pack/pkgs/container/idris2-pack
