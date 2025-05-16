@@ -41,6 +41,8 @@ tests =
   , test "for Joseph"                                   (assertEq (plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Joseph") $ Just [Violets, Clover, Violets, Grass])
   , test "for Kincaid, second to last student's garden" (assertEq (plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Kincaid") $ Just [Grass, Clover, Clover, Grass])
   , test "for Larry, last student's garden"             (assertEq (plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Larry") $ Just [Grass, Violets, Clover, Violets])
+  , test "invalid student"                              (assertEq (plants "RC\nGG" "Zechariah") $ Nothing)
+  , test "invalid diagram"                              (assertEq (plants "CO\nRN" "Alice") $ Nothing)
   ]
 
 export

@@ -17,8 +17,32 @@ implementation Show Plant where
   show Violets = "Violets"
 """
 
+EXTRA_CASES = [
+    {
+        "description": "invalid student",
+        "property": "plants",
+        "input": {
+            "diagram": "RC\nGG",
+            "student": "Zechariah"
+        },
+        "expected": {}
+    },
+    {
+        "description": "invalid diagram",
+        "property": "plants",
+        "input": {
+            "diagram": "CO\nRN",
+            "student": "Alice"
+        },
+        "expected": {}
+    }
+]
+
 def header():
     return HEADER
+
+def extra_cases():
+    return EXTRA_CASES
 
 def generate_test(case):
     property = case["property"]
