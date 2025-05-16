@@ -6,6 +6,7 @@ import Tester.Runner
 
 import ListOps
 
+import Data.List
 import Data.Nat
 
 isOdd : Int -> Bool
@@ -46,6 +47,14 @@ tests =
   , test "list of lists is not flattened"                           (assertEq (ListOps.reverse [[1, 2], [3], (the (List Int) []), [4, 5, 6]]) [[4, 5, 6], (the (List Int) []), [3], [1, 2]])
   , test "foldl with subtraction"                                   (assertEq (ListOps.foldl subtract 3 [6, 8]) 5)
   , test "foldr with subtraction"                                   (assertEq (ListOps.foldr subtract 3 [6, 8]) 1)
+  , test "append long lists"                                        (assertEq (ListOps.append (replicate 3000 True) (replicate 4000 True)) (replicate 7000 True))
+  , test "concat long lists"                                        (assertEq (ListOps.concat (replicate 60 (replicate 50 True))) (replicate 3000 True))
+  , test "filter long list"                                         (assertEq (ListOps.filter isOdd (replicate 5000 1)) (replicate 5000 1))
+  , test "length long list"                                         (assertEq (ListOps.length (replicate 7000 True)) 7000)
+  , test "map long list"                                            (assertEq (ListOps.map plusOne (replicate 5000 3)) (replicate 5000 4))
+  , test "foldl long list"                                          (assertEq (ListOps.foldl (+) 0 (replicate 8000 1)) 8000)
+  , test "foldr long list"                                          (assertEq (ListOps.foldr (+) 0 (replicate 3000 1)) 3000)
+  , test "reverse long list"                                        (assertEq (ListOps.reverse (replicate 9000 0)) (replicate 9000 0))
   ]
 
 export

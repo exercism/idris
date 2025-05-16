@@ -1,5 +1,6 @@
 
 HEADER = """
+import Data.List
 import Data.Nat
 
 isOdd : Int -> Bool
@@ -35,6 +36,77 @@ EXTRA_CASES = [
             "function": "(acc, el) -> el - acc"
         },
         "expected": 1
+    },
+    {
+        "description": "append long lists",
+        "property": "append",
+        "input": {
+            "list1": "(replicate 3000 True)",
+            "list2": "(replicate 4000 True)"
+        },
+        "expected": "(replicate 7000 True)"
+    },
+    {
+        "description": "concat long lists",
+        "property": "concat",
+        "input": {
+            "lists": "(replicate 60 (replicate 50 True))"
+        },
+        "expected": "(replicate 3000 True)"
+    },
+    {
+        "description": "filter long list",
+        "property": "filter",
+        "input": {
+            "list": "(replicate 5000 1)",
+            "function": "(x) -> x modulo 2 == 1"
+        },
+        "expected": "(replicate 5000 1)"
+    },
+    {
+        "description": "length long list",
+        "property": "length",
+        "input": {
+            "list": "(replicate 7000 True)"
+        },
+        "expected": 7000
+    },
+    {
+        "description": "map long list",
+        "property": "map",
+        "input": {
+            "list": "(replicate 5000 3)",
+            "function": "(x) -> x + 1"
+        },
+        "expected": "(replicate 5000 4)"
+    },
+    {
+        "description": "foldl long list",
+        "property": "foldl",
+        "input": {
+            "list": "(replicate 8000 1)",
+            "initial": 0,
+            "function": "(acc, el) -> el + acc"
+        },
+        "expected": "8000"
+    },
+    {
+        "description": "foldr long list",
+        "property": "foldr",
+        "input": {
+            "list": "(replicate 3000 1)",
+            "initial": 0,
+            "function": "(acc, el) -> el + acc"
+        },
+        "expected": "3000"
+    },
+    {
+        "description": "reverse long list",
+        "property": "reverse",
+        "input": {
+            "list": "(replicate 9000 0)"
+        },
+        "expected": "(replicate 9000 0)"
     }
 ]
 
@@ -50,6 +122,8 @@ def serialize(number_list):
 def serialize_nested(number_list_list):
     if number_list_list == []:
         return "(the (List (List Int)) [])"
+    if isinstance(number_list_list, str):
+        return number_list_list
     return str(list(map(serialize, number_list_list))).replace("'", "")
 
 def generate_test(case):
