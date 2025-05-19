@@ -1,13 +1,9 @@
-# {{ .Spec.Name }}
+# Tests
 
-{{ .Spec.Description -}}
-{{- with .Hints }}
-{{ . }}
-{{ end }}
-{{- with .Spec.Credits -}}
-## Source
+To run the tests after [Installing Idris locally][], use
 
-{{ . }}
-{{ end }}
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+```
+pack test hello-world
+```
+
+[Installing Idris locally]: https://exercism.org/docs/tracks/idris/installation

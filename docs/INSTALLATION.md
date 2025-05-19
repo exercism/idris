@@ -6,7 +6,7 @@ The Idris track uses [Pack][], an Idris2 Package Manager.
 
 ```shell
 sudo apt update
-sudo apt install chezscheme gcc git libgmp-dev make
+sudo apt install chezscheme curl gcc git libgmp-dev make
 ```
 
 ### Preparation - Other distributions
@@ -19,21 +19,21 @@ Configure Chez Scheme with support for threads.
 ```shell
 git version
 sudo apt update
-sudo apt install gcc libgmp-dev libncurses5-dev libx11-dev make
+sudo apt install curl gcc libgmp-dev libncurses5-dev libx11-dev make
 
 git clone https://github.com/cisco/ChezScheme.git
 cd ChezScheme
 ./configure --threads
 make
 sudo make install
+cd ..
 which scheme
 ```
 
 ### Pack
 
 ```
-git clone https://github.com/stefan-hoeck/idris2-pack.git pack
-bash -c pack/install.bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/stefan-hoeck/idris2-pack/main/install.bash)"
 export PATH="$HOME/.pack/bin:$HOME/.idris2/bin:$PATH"
 pack info
 ```
