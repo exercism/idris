@@ -506,6 +506,38 @@
       }
     ]
   },
+  "key_features": [
+    {
+      "title": "Dependently typed",
+      "content": "Safety first! Strong guarantees about the correctness of programs at compile time.",
+      "icon": "statically-typed"
+    },
+    {
+      "title": "Purely functional",
+      "content": "Inspired by lambda calculus, scopes and loops are expressed by defining and calling functions.",
+      "icon": "functional"
+    },
+    {
+      "title": "Type classes",
+      "content": "Categorising types into classes provides type-safe overloading.",
+      "icon": "extensible"
+    },
+    {
+      "title": "Multithreaded",
+      "content": "Data being immutable allows for safer and easier-to-reason-about concurrency.",
+      "icon": "concurrency"
+    },
+    {
+      "title": "Compact",
+      "content": "Idris supplies a small number of general-purpose features.",
+      "icon": "small"
+    },
+    {
+      "title": "Innovative",
+      "content": "Idris is an actively-developed research testbed",
+      "icon": "evolving"
+    }
+  ],
   "tags": [
     "execution_mode/compiled",
     "paradigm/declarative",
