@@ -1,4 +1,3 @@
-
 MONTHS = [
     None,
     "January",
@@ -12,8 +11,9 @@ MONTHS = [
     "September",
     "October",
     "November",
-    "December"
+    "December",
 ]
+
 
 def generate_test(case):
     property = case["property"]

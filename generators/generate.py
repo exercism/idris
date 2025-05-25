@@ -26,11 +26,14 @@ main = do
      else exitFailure
 """
 
+
 def read_canonical_data(exercise):
     prefix = "Using cached 'problem-specifications' dir: "
-    args = ['bin/configlet', 'info', '-o', '-v', 'd']
-    info = subprocess.run(args, capture_output=True, check=True, text=True).stdout.split("\n")
-    cache_dir = [line[len(prefix):] for line in info if line.startswith(prefix)]
+    args = ["bin/configlet", "info", "-o", "-v", "d"]
+    info = subprocess.run(
+        args, capture_output=True, check=True, text=True
+    ).stdout.split("\n")
+    cache_dir = [line[len(prefix) :] for line in info if line.startswith(prefix)]
     if len(cache_dir) != 1:
         raise Exception("Could not determine 'problem-specifications' dir")
     json_path = f"{cache_dir[0]}/exercises/{exercise}/canonical-data.json"
@@ -38,10 +41,12 @@ def read_canonical_data(exercise):
         with open(json_path, "r") as f:
             return json.loads(f.read())
     else:
-        return { "cases": [] }
+        return {"cases": []}
+
 
 def flatten_cases(canonical_data):
     result = []
+
     def traverse(node):
         nonlocal result
         if "cases" in node:
@@ -49,14 +54,19 @@ def flatten_cases(canonical_data):
                 traverse(child)
         else:
             result.append(node)
+
     traverse(canonical_data)
     return result
+
 
 def filter_cases(exercise, cases):
     toml_path = f"{sys.path[0]}/../exercises/practice/{exercise}/.meta/tests.toml"
     with open(toml_path, "rb") as f:
         test_toml = tomllib.load(f)
-    return list(filter(lambda case : test_toml.get(case['uuid'], {}).get("include", True), cases))
+    return list(
+        filter(lambda case: test_toml.get(case["uuid"], {}).get("include", True), cases)
+    )
+
 
 def write_test_file(f, mod, exercise, cases):
     if hasattr(mod, "extra_cases"):
@@ -69,19 +79,20 @@ def write_test_file(f, mod, exercise, cases):
     f.write(f"import {exercise_module}\n")
     if hasattr(mod, "header"):
         f.write(mod.header())
-    f.write(f"\n")
-    f.write(f"tests : List Test\n")
-    f.write(f"tests =\n")
-    separator = '['
+    f.write("\n")
+    f.write("tests : List Test\n")
+    f.write("tests =\n")
+    separator = "["
     for case in cases:
         description = case["description"]
         padding = " " * (max_description_length - len(description))
         test_func = mod.generate_test(case)
         f.write(f'  {separator} test "{description}"{padding} ({test_func})\n')
-        separator = ','
+        separator = ","
 
-    f.write(f"  ]\n")
+    f.write("  ]\n")
     f.write(SUFFIX)
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -95,6 +106,7 @@ def main():
     path = f"{sys.path[0]}/../exercises/practice/{args.exercise}/test/src/Main.idr"
     with open(path, "w") as f:
         write_test_file(f, mod, args.exercise, cases)
+
 
 if __name__ == "__main__":
     main()

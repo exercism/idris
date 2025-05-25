@@ -1,4 +1,3 @@
-
 HEADER = """import Data.Vect
 
 public export
@@ -21,36 +20,35 @@ EXTRA_CASES = [
     {
         "description": "invalid student",
         "property": "plants",
-        "input": {
-            "diagram": "RC\nGG",
-            "student": "Zechariah"
-        },
-        "expected": {}
+        "input": {"diagram": "RC\nGG", "student": "Zechariah"},
+        "expected": {},
     },
     {
         "description": "invalid diagram",
         "property": "plants",
-        "input": {
-            "diagram": "CO\nRN",
-            "student": "Alice"
-        },
-        "expected": {}
-    }
+        "input": {"diagram": "CO\nRN", "student": "Alice"},
+        "expected": {},
+    },
 ]
+
 
 def header():
     return HEADER
 
+
 def extra_cases():
     return EXTRA_CASES
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if expected.__class__ == dict:
+    if isinstance(expected, dict):
         expected = "Nothing"
     else:
-        expected = str(list(map(lambda plant : plant.title(), expected))).replace("'", "")
+        expected = str(list(map(lambda plant: plant.title(), expected))).replace(
+            "'", ""
+        )
         expected = f"Just {expected}"
 
     diagram = case["input"]["diagram"].replace("\n", "\\n")

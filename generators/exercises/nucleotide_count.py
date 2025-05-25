@@ -1,4 +1,3 @@
-
 HEADER = """
 export
 implementation Eq DNA where
@@ -9,8 +8,10 @@ implementation Show DNA where
   show (MkDNA a c g t) = "(MkDNA " ++ (show a) ++ " " ++ (show c) ++ " " ++ (show g) ++ " " ++ (show t) ++ ")"
 """
 
+
 def header():
     return HEADER
+
 
 def generate_test(case):
     property = case["property"]

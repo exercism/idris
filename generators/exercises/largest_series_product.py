@@ -1,4 +1,3 @@
-
 HEADER = """
 export
 implementation Eq Error where
@@ -12,13 +11,15 @@ implementation Show Error where
   show SpanExceedsStringLength = "SpanExceedsStringLength"
 """
 
+
 def header():
     return HEADER
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if expected.__class__ == dict:
+    if isinstance(expected, dict):
         expected = expected["error"]
         if expected == "digits input must only contain digits":
             expected = "Left StringContainsNonDigit"
@@ -27,7 +28,7 @@ def generate_test(case):
         else:
             raise Exception(f"Unexpected error {expected}")
     else:
-         expected = f"Right {expected}"
+        expected = f"Right {expected}"
 
     digits = case["input"]["digits"]
     span = case["input"]["span"]

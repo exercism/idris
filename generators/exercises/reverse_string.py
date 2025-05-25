@@ -1,4 +1,3 @@
-
 def generate_test(case):
     property = "rev"
     expected = case["expected"]

@@ -1,11 +1,10 @@
-
 def generate_test(case):
-    property = 'isLeap'
+    property = "isLeap"
     expected = case["expected"]
     year = case["input"]["year"]
     if expected:
-        prefix = 'assert $      '
+        prefix = "assert $      "
     else:
-        prefix = 'assert $ not $'
+        prefix = "assert $ not $"
 
-    return f'{prefix} {property} {year}'
+    return f"{prefix} {property} {year}"

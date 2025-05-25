@@ -1,11 +1,11 @@
-
 def header():
     return "import Data.Vect\n"
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if expected.__class__ == dict:
+    if isinstance(expected, dict):
         expected = "Nothing"
     else:
         expected = f"Just {expected}"
@@ -17,4 +17,4 @@ def generate_test(case):
 
     value = case["input"]["value"]
 
-    return f'assertEq ({property} {n} {array} {value}) $ {expected}'
+    return f"assertEq ({property} {n} {array} {value}) $ {expected}"

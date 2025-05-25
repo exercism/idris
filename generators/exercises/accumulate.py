@@ -1,6 +1,6 @@
-
 def header():
     return "import Data.String\n"
+
 
 def generate_test(case):
     description = case["description"]
@@ -10,7 +10,7 @@ def generate_test(case):
 
     f = case["input"]["accumulator"]
     if description == "accumulate recursively":
-        f = "(\\x => accumulate (\\y => x ++ y) [\"1\", \"2\", \"3\"]"
+        f = '(\\x => accumulate (\\y => x ++ y) ["1", "2", "3"]'
     if f == "(x) => upcase(x)":
         f = "Data.String.toUpper"
     elif f == "(x) => reverse(x)":
@@ -19,4 +19,4 @@ def generate_test(case):
         f = "(\\x" + f[3:] + ")"
 
     xs = str(case["input"]["list"]).replace("'", '"')
-    return f'assertEq ({property} {f} {xs}) {expected}'
+    return f"assertEq ({property} {f} {xs}) {expected}"
