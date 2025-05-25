@@ -3,4 +3,4 @@ def generate_test(case):
     expected = case["expected"]
     factors = case["input"]["factors"]
     limit = case["input"]["limit"]
-    return f'assertEq ({property} {factors} {limit}) {expected}'
+    return f"assertEq ({property} {factors} {limit}) {expected}"

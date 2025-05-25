@@ -1,4 +1,3 @@
-
 HEADER = """
 public export
 implementation Eq Category where
@@ -14,13 +13,15 @@ implementation Show Category where
   show Deficient = "Deficient"
 """
 
+
 def header():
     return HEADER
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if expected.__class__ == dict:
+    if isinstance(expected, dict):
         expected = "Nothing"
     else:
         expected = f"Just {expected.title()}"
@@ -28,4 +29,4 @@ def generate_test(case):
     if number < 0:
         number = f"$ {number}"
 
-    return f'assertEq ({property} {number}) $ {expected}'
+    return f"assertEq ({property} {number}) $ {expected}"

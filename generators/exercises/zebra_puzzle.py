@@ -1,4 +1,3 @@
-
 HEADER = """
 public export
 implementation Eq Nationality where
@@ -18,10 +17,12 @@ implementation Show Nationality where
   show Ukrainian = "Ukrainian"
 """
 
+
 def header():
     return HEADER
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    return f'assertEq solution.{property} {expected}'
+    return f"assertEq solution.{property} {expected}"

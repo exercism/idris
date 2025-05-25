@@ -1,4 +1,3 @@
-
 HEADER = """
 export
 implementation Eq Tree where
@@ -12,22 +11,25 @@ implementation Show Tree where
   show (Branch left value right) = "(" ++ (show left) ++ " " ++ (show value) ++ " " ++ (show right) ++ ")"
 """
 
+
 def header():
     return HEADER
 
+
 def serialize(tree):
     if tree == {}:
-        return 'Leaf'
+        return "Leaf"
     else:
-        left = tree['l']
-        value = tree['v']
-        right = tree['r']
+        left = tree["l"]
+        value = tree["v"]
+        right = tree["r"]
         return f"(Branch {serialize(left)} '{value}' {serialize(right)})"
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if 'error' in expected.keys():
+    if "error" in expected.keys():
         expected = "Nothing"
     else:
         expected = f"Just {serialize(expected)}"
@@ -35,4 +37,4 @@ def generate_test(case):
     preorder = case["input"]["preorder"]
     inorder = case["input"]["inorder"]
 
-    return f'assertEq ({property} {preorder} {inorder}) $ {expected}'
+    return f"assertEq ({property} {preorder} {inorder}) $ {expected}"

@@ -1,9 +1,8 @@
-
 def generate_test(case):
     def to_item(data):
         weight = data["weight"]
         value = data["value"]
-        return f'item {weight} {value}'
+        return f"item {weight} {value}"
 
     property = case["property"]
     expected = case["expected"]
@@ -13,4 +12,4 @@ def generate_test(case):
     if items == "[]":
         items = "(the (List Item) [])"
 
-    return f'assertEq ({property} {maximumWeight} {items}) {expected}'
+    return f"assertEq ({property} {maximumWeight} {items}) {expected}"

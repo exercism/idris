@@ -1,4 +1,3 @@
-
 HEADER = """
 export
 implementation Eq Error where
@@ -12,13 +11,15 @@ implementation Show Error where
   show InvalidDigit = "InvalidDigit"
 """
 
+
 def header():
     return HEADER
+
 
 def generate_test(case):
     property = case["property"]
     expected = case["expected"]
-    if expected.__class__ == dict:
+    if isinstance(expected, dict):
         if "digits" in expected["error"]:
             expected = "Left InvalidDigit"
         else:
@@ -34,4 +35,4 @@ def generate_test(case):
     if outputBase < 0:
         outputBase = f"({outputBase})"
 
-    return f'assertEq ({property} {inputBase} {digits} {outputBase}) $ {expected}'
+    return f"assertEq ({property} {inputBase} {digits} {outputBase}) $ {expected}"
