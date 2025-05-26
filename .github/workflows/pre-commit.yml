@@ -1,4 +1,4 @@
-name: arm64-assembly / pre-commit checks
+name: idris / pre-commit checks
 
 on:
   push:
