@@ -9,7 +9,7 @@ sudo apt update
 sudo apt install chezscheme curl gcc git libgmp-dev make
 ```
 
-### Preparation - Other distributions
+### Preparation - Other Linux distributions
 
 Make sure you have a recent git, version 2.35.1 or later.
 
@@ -30,6 +30,15 @@ cd ..
 which scheme
 ```
 
+### Preparation - MacOS
+
+MacOS users can install Chez Scheme with [Homebrew][]:
+
+```
+brew update
+brew install chezscheme
+```
+
 ### Pack
 
 ```
@@ -47,5 +56,6 @@ See Pack's detailed [installation instructions][].
 Stefan Höck provides Ubuntu-based [Docker images][] with Pack installed.
 
 [Pack]: https://github.com/stefan-hoeck/idris2-pack
+[Homebrew]: https://brew.sh
 [installation instructions]: https://github.com/stefan-hoeck/idris2-pack/blob/main/INSTALL.md
 [Docker images]: https://github.com/stefan-hoeck/idris2-pack/pkgs/container/idris2-pack
