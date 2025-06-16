@@ -1,6 +1,6 @@
 # Learning
 
-- [The official documentation](https://docs.idris-lang.org/en/latest/index.html)
+- [The official documentation](https://idris2.readthedocs.io/en/latest/)
 
 This tutorial is intended as a brief introduction to the language,
 and is aimed at readers already familiar with a functional language such as Haskell or OCaml.
