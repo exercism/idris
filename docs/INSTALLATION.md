@@ -43,7 +43,7 @@ brew install chezscheme
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/stefan-hoeck/idris2-pack/main/install.bash)"
-export PATH="$HOME/.pack/bin:$HOME/.idris2/bin:$PATH"
+export PATH="$HOME/.pack/bin:$PATH"
 pack info
 ```
 
