@@ -3,8 +3,11 @@ name: Run Configlet Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 15 * *'
+    - cron: '0 0 8 * *'
 
 jobs:
   call-gha-workflow:
     uses: exercism/github-actions/.github/workflows/configlet-sync.yml@main
+    with:
+      sync_docs: true
+      sync_tests: false
