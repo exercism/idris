@@ -6,7 +6,13 @@ import json
 import os
 import subprocess
 import sys
-import tomllib
+
+# tomllib is available in the standard library as of Python 3.11
+# When using an older release, we use the compatible tomli
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 PREFIX = """module Main
 
