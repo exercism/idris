@@ -1,0 +1,6 @@
+package line-up-test
+depends = line-up
+  , tester
+main = Main
+executable = "line-up-test"
+sourcedir = "src"

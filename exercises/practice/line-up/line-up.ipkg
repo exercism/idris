@@ -1,0 +1,3 @@
+package line-up
+modules = LineUp
+sourcedir = "src"
