@@ -27,6 +27,7 @@ tests =
   , test "Smallest abundant number is classified correctly"                 (assertEq (classify 12) $ Just Abundant)
   , test "Medium abundant number is classified correctly"                   (assertEq (classify 30) $ Just Abundant)
   , test "Large abundant number is classified correctly"                    (assertEq (classify 33550335) $ Just Abundant)
+  , test "Perfect square abundant number is classified correctly"           (assertEq (classify 196) $ Just Abundant)
   , test "Smallest prime deficient number is classified correctly"          (assertEq (classify 2) $ Just Deficient)
   , test "Smallest non-prime deficient number is classified correctly"      (assertEq (classify 4) $ Just Deficient)
   , test "Medium deficient number is classified correctly"                  (assertEq (classify 32) $ Just Deficient)
