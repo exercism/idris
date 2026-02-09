@@ -1,3 +1,4 @@
 package resistor-color
+depends = contrib
 modules = ResistorColor
 sourcedir = "src"

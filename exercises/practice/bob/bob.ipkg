@@ -1,3 +1,4 @@
 package bob
+depends = contrib
 modules = Bob
 sourcedir = "src"

@@ -1,3 +1,4 @@
 package matching-brackets
+depends = contrib
 modules = MatchingBrackets
 sourcedir = "src"

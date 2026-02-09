@@ -1,3 +1,4 @@
 package eliuds-eggs
+depends = contrib
 modules = EliudsEggs
 sourcedir = "src"

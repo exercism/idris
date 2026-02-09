@@ -1,3 +1,4 @@
 package game-of-life
+depends = contrib
 modules = GameOfLife
 sourcedir = "src"

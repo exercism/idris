@@ -1,3 +1,4 @@
 package two-fer
+depends = contrib
 modules = TwoFer
 sourcedir = "src"

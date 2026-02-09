@@ -1,3 +1,4 @@
 package grains
+depends = contrib
 modules = Grains
 sourcedir = "src"

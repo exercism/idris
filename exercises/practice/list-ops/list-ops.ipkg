@@ -1,3 +1,4 @@
 package list-ops
+depends = contrib
 modules = ListOps
 sourcedir = "src"

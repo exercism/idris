@@ -1,3 +1,4 @@
 package kindergarten-garden
+depends = contrib
 modules = KindergartenGarden
 sourcedir = "src"

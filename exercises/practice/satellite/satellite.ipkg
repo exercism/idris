@@ -1,3 +1,4 @@
 package satellite
+depends = contrib
 modules = Satellite
 sourcedir = "src"

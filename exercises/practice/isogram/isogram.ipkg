@@ -1,3 +1,4 @@
 package isogram
+depends = contrib
 modules = Isogram
 sourcedir = "src"

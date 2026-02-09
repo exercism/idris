@@ -1,3 +1,4 @@
 package collatz-conjecture
+depends = contrib
 modules = CollatzConjecture
 sourcedir = "src"

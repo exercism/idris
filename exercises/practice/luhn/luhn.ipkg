@@ -1,3 +1,4 @@
 package luhn
+depends = contrib
 modules = Luhn
 sourcedir = "src"

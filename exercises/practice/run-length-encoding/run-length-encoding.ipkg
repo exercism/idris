@@ -1,3 +1,4 @@
 package run-length-encoding
+depends = contrib
 modules = RunLengthEncoding
 sourcedir = "src"

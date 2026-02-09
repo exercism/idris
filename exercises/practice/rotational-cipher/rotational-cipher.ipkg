@@ -1,3 +1,4 @@
 package rotational-cipher
+depends = contrib
 modules = RotationalCipher
 sourcedir = "src"

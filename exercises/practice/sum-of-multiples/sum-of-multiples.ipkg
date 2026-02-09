@@ -1,3 +1,4 @@
 package sum-of-multiples
+depends = contrib
 modules = SumOfMultiples
 sourcedir = "src"

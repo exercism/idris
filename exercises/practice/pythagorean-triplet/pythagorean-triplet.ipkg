@@ -1,3 +1,4 @@
 package pythagorean-triplet
+depends = contrib
 modules = PythagoreanTriplet
 sourcedir = "src"

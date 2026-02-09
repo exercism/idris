@@ -1,3 +1,4 @@
 package micro-blog
+depends = contrib
 modules = MicroBlog
 sourcedir = "src"

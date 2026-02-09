@@ -1,3 +1,4 @@
 package prime-factors
+depends = contrib
 modules = PrimeFactors
 sourcedir = "src"

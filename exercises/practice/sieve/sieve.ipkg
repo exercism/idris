@@ -1,3 +1,4 @@
 package sieve
+depends = contrib
 modules = Sieve
 sourcedir = "src"

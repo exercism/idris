@@ -1,3 +1,4 @@
 package atbash-cipher
+depends = contrib
 modules = AtbashCipher
 sourcedir = "src"

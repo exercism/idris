@@ -1,3 +1,4 @@
 package all-your-base
+depends = contrib
 modules = AllYourBase
 sourcedir = "src"

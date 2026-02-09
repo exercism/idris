@@ -1,3 +1,4 @@
 package book-store
+depends = contrib
 modules = BookStore
 sourcedir = "src"

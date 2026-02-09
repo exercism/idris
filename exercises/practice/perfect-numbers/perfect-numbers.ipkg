@@ -1,3 +1,4 @@
 package perfect-numbers
+depends = contrib
 modules = PerfectNumbers
 sourcedir = "src"

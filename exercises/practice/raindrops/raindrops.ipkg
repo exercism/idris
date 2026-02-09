@@ -1,3 +1,4 @@
 package raindrops
+depends = contrib
 modules = Raindrops
 sourcedir = "src"

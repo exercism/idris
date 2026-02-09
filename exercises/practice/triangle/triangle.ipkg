@@ -1,3 +1,4 @@
 package triangle
+depends = contrib
 modules = Triangle
 sourcedir = "src"

@@ -1,3 +1,4 @@
 package dominoes
+depends = contrib
 modules = Dominoes
 sourcedir = "src"
