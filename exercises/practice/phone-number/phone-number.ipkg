@@ -1,3 +1,4 @@
 package phone-number
+depends = contrib
 modules = PhoneNumber
 sourcedir = "src"

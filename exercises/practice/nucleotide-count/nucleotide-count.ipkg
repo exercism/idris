@@ -1,3 +1,4 @@
 package nucleotide-count
+depends = contrib
 modules = NucleotideCount
 sourcedir = "src"

@@ -1,3 +1,4 @@
 package nth-prime
+depends = contrib
 modules = NthPrime
 sourcedir = "src"

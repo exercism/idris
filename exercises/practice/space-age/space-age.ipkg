@@ -1,3 +1,4 @@
 package space-age
+depends = contrib
 modules = SpaceAge
 sourcedir = "src"

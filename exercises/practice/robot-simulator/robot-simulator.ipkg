@@ -1,3 +1,4 @@
 package robot-simulator
+depends = contrib
 modules = RobotSimulator
 sourcedir = "src"

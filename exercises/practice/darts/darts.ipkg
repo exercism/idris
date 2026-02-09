@@ -1,3 +1,4 @@
 package darts
+depends = contrib
 modules = Darts
 sourcedir = "src"

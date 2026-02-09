@@ -1,3 +1,4 @@
 package scrabble-score
+depends = contrib
 modules = ScrabbleScore
 sourcedir = "src"

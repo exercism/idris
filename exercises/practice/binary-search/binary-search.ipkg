@@ -1,3 +1,4 @@
 package binary-search
+depends = contrib
 modules = BinarySearch
 sourcedir = "src"

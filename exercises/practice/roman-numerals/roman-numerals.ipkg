@@ -1,3 +1,4 @@
 package roman-numerals
+depends = contrib
 modules = RomanNumerals
 sourcedir = "src"

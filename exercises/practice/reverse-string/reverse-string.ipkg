@@ -1,3 +1,4 @@
 package reverse-string
+depends = contrib
 modules = ReverseString
 sourcedir = "src"

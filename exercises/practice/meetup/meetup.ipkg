@@ -1,3 +1,4 @@
 package meetup
+depends = contrib
 modules = Meetup
 sourcedir = "src"

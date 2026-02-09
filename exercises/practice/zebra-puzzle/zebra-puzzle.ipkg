@@ -1,3 +1,4 @@
 package zebra-puzzle
+depends = contrib
 modules = ZebraPuzzle
 sourcedir = "src"

@@ -1,3 +1,4 @@
 package pangram
+depends = contrib
 modules = Pangram
 sourcedir = "src"

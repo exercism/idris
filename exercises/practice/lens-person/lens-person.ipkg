@@ -1,3 +1,4 @@
 package lens-person
+depends = contrib
 modules = LensPerson
 sourcedir = "src"

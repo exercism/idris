@@ -1,3 +1,4 @@
 package knapsack
+depends = contrib
 modules = Knapsack
 sourcedir = "src"

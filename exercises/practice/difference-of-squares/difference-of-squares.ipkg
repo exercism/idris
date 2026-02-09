@@ -1,3 +1,4 @@
 package difference-of-squares
+depends = contrib
 modules = DifferenceOfSquares
 sourcedir = "src"

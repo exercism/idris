@@ -1,3 +1,4 @@
 package hamming
+depends = contrib
 modules = Hamming
 sourcedir = "src"

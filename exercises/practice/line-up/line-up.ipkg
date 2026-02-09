@@ -1,3 +1,4 @@
 package line-up
+depends = contrib
 modules = LineUp
 sourcedir = "src"
