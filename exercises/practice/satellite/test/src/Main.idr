@@ -25,6 +25,9 @@ tests =
   , test "Reject traversals of different length"         (assertEq (treeFromTraversals ['a', 'b'] ['b', 'a', 'r']) $ Nothing)
   , test "Reject inconsistent traversals of same length" (assertEq (treeFromTraversals ['x', 'y', 'z'] ['a', 'b', 'c']) $ Nothing)
   , test "Reject traversals with repeated items"         (assertEq (treeFromTraversals ['a', 'b', 'a'] ['b', 'a', 'a']) $ Nothing)
+  , test "A degenerate binary tree"                      (assertEq (treeFromTraversals ['a', 'b', 'c', 'd'] ['d', 'c', 'b', 'a']) $ Just (Branch (Branch (Branch (Branch Leaf 'd' Leaf) 'c' Leaf) 'b' Leaf) 'a' Leaf))
+  , test "Another degenerate binary tree"                (assertEq (treeFromTraversals ['a', 'b', 'c', 'd'] ['a', 'b', 'c', 'd']) $ Just (Branch Leaf 'a' (Branch Leaf 'b' (Branch Leaf 'c' (Branch Leaf 'd' Leaf)))))
+  , test "Tree with many more items"                     (assertEq (treeFromTraversals ['a', 'b', 'd', 'g', 'h', 'c', 'e', 'f', 'i'] ['g', 'd', 'h', 'b', 'a', 'e', 'c', 'i', 'f']) $ Just (Branch (Branch (Branch (Branch Leaf 'g' Leaf) 'd' (Branch Leaf 'h' Leaf)) 'b' Leaf) 'a' (Branch (Branch Leaf 'e' Leaf) 'c' (Branch (Branch Leaf 'i' Leaf) 'f' Leaf))))
   ]
 
 export
