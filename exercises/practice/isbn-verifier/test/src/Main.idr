@@ -15,6 +15,8 @@ tests =
   , test "invalid check digit in isbn is not treated as zero"        (assert $ not $ isValid "4-598-21507-B")
   , test "invalid character in isbn is not treated as zero"          (assert $ not $ isValid "3-598-P1581-X")
   , test "X is only valid as a check digit"                          (assert $ not $ isValid "3-598-2X507-9")
+  , test "only one check digit is allowed"                           (assert $ not $ isValid "3-598-21508-96")
+  , test "X is not substituted by the value 10"                      (assert $ not $ isValid "3-598-2X507-5")
   , test "valid isbn without separating dashes"                      (assert $       isValid "3598215088")
   , test "isbn without separating dashes and X as check digit"       (assert $       isValid "359821507X")
   , test "isbn without check digit and dashes"                       (assert $ not $ isValid "359821507")
