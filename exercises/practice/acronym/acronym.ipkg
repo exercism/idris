@@ -1,0 +1,4 @@
+package acronym
+depends = contrib
+modules = Acronym
+sourcedir = "src"
