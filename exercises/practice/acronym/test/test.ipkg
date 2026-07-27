@@ -1,0 +1,6 @@
+package acronym-test
+depends = acronym
+  , tester
+main = Main
+executable = "acronym-test"
+sourcedir = "src"

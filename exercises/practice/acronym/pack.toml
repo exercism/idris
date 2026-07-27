@@ -1,0 +1,10 @@
+[custom.all.acronym]
+type = "local"
+path = "."
+ipkg = "acronym.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.acronym-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
