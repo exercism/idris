@@ -1,0 +1,12 @@
+mostCommonWord : String -> String
+mostCommonWord text =
+  let (best, n) = go empty ("", 0) (words (toLower text))
+  in "\"" ++ best ++ "\" appears " ++ show n ++ " times"
+  where
+    go : SortedMap String Nat -> (String, Nat) -> List String -> (String, Nat)
+    go counts best [] = best
+    go counts (top, n) (word :: rest) =
+      let count = fromMaybe 0 (lookup word counts) + 1
+          counts' = insert word count counts
+      in if count > n then go counts' (word, count) rest
+                      else go counts' (top, n) rest
